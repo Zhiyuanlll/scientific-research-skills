@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "timezone": "Asia/Shanghai",
+  "threads": {},
+  "literature_runtime_dir": null,
+  "project_sources": [],
+  "figure_style_profile": null,
+  "plot_backend": null,
+  "python_path": null,
+  "node_path": null,
+  "marked_module_path": null
+}

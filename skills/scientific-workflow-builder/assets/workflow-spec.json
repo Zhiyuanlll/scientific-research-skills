@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "workflow_id": "example-research-workflow",
+  "stages": [
+    {
+      "id": "extract_inputs",
+      "role": "measurement",
+      "depends_on": [],
+      "acceptance": [
+        {"id": "input_contract", "description": "核对字段、单位、坐标和源数据版本；具体规则需在项目中填写"}
+      ],
+      "outputs": [
+        {"id": "physical_inputs", "description": "有来源和字段说明的输入表；单位按字段约定", "units": null}
+      ]
+    },
+    {
+      "id": "validate_model",
+      "role": "validation",
+      "depends_on": ["extract_inputs"],
+      "acceptance": [
+        {"id": "numerical_check", "description": "针对实现不变量和数值可靠性的检查；阈值依据待项目确定"},
+        {"id": "reference_comparison", "description": "独立参考上的定量比较；参考与接受范围待项目确定"}
+      ],
+      "outputs": [
+        {"id": "validation_summary", "description": "比较指标、未通过项和实际验证范围", "units": null}
+      ]
+    },
+    {
+      "id": "explore_parameters",
+      "role": "prediction",
+      "depends_on": ["extract_inputs", "validate_model"],
+      "acceptance": [
+        {"id": "task_coverage", "description": "对照任务清单核实完成和异常，不把预测当独立验证"}
+      ],
+      "outputs": [
+        {"id": "prediction_summary", "description": "参数研究的有效结果、样本数量和覆盖范围", "units": null}
+      ]
+    }
+  ]
+}

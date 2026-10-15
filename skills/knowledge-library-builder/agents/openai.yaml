@@ -1,0 +1,4 @@
+interface:
+  display_name: "Knowledge Library Builder"
+  short_description: "Build and deepen sourced libraries across research directions"
+  default_prompt: "Use $knowledge-library-builder to build or deepen my knowledge library from selected sources, preserving provenance and reusing shared concepts."

@@ -1,6 +1,7 @@
 ---
 name: researchwrite
-description: "Compose, revise, or audit research proposals, opening reports, and research plans from supporting evidence. Use for 研究计划、开题报告、科研项目申请书. Invoked as researchwrite for compatibility; use nature-writing for general manuscript sections."
+description: |
+  Proposal-first scientific writing pipeline. Three modes (compose/revise/hybrid) with four-layer QA pipeline. Enforces evidence-before-prose, argument-before-sections, and contracts-before-paragraphs.
 license: MIT
 metadata:
   hermes:
@@ -8,13 +9,15 @@ metadata:
     related_skills: [brainstorming, professor, avoid-ai-writing, docx]
 ---
 
+<!-- Redistribution/adaptation notice: integrated local snapshot, 2026-10-15. Upstream: Yuan1z0825/nature-skills. See ../../THIRD_PARTY_NOTICES.md and PACKAGE_MANIFEST.json for origins, licenses and recorded changes. -->
+
 # researchwrite — proposal-first 科研写作 pipeline
 
 受 autonovel（状态机+打分）、professor（动态专家）、brainstorming（入口追问）、anti-AI-writing（语言清理）启发的科研写作状态机。**不是通用"帮我写论文"prompt。**
 
-`researchwrite` 是为兼容既有安装保留的触发名称，仓库目录名仍为
-`nature-proposal-writer`。不要在没有迁移方案时修改 frontmatter 名称。需要初始化模板、
-按条件加载参考资料或执行导出脚本时，先读取 `manifest.yaml`，只加载与当前条件匹配的路径。
+## 分享版的平台适配
+
+本分享包不附带独立的 professor、brainstorming、avoid-ai-writing 或 docx 技能。可用时调用实际工具；缺少时按本技能 references 中的职责与检查表执行，使用宿主支持的独立评审能力或明确标为单代理的分角色审查，不虚构已调用外部技能或独立专家。需要 DOCX 时使用接收者环境中可用的文档工具；Markdown 交付不依赖 Word 工具。
 
 ## 核心原则
 
@@ -59,8 +62,7 @@ qa_logs/                  诊断、专家审查、anti-slop、打分记录
 exports/                  最终输出（.md + .docx）
 ```
 
-新建项目时按 `manifest.yaml` 的 `templates.on_demand` 路由从 `templates/` 取空模板。
-`references/worked-example-quaternary-proposal.md` 提供了基于通用材料科学领域的完整填写示例。
+新建项目时从 `templates/` 取空模板。`references/worked-example-quaternary-proposal.md` 提供了基于通用材料科学领域的完整填写示例。
 
 ## Reference 文件索引
 

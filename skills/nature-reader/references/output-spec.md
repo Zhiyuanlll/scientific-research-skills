@@ -1,17 +1,5 @@
 # Output Spec
 
-## Contents
-
-- [Standard bundle](#standard-bundle)
-- [Full-text mode](#full-text-mode)
-- [source_map.json](#source_mapjson)
-- [paper.md](#papermd)
-- [reader.html](#readerhtml)
-- [Layout rules](#layout-rules)
-- [Figure/table card format](#figuretable-card-format)
-- [Citation format in the page](#citation-format-in-the-page)
-
-
 ## Standard bundle
 
 Produce these files when possible:
@@ -19,7 +7,7 @@ Produce these files when possible:
 - `paper.md`
 - `source_map.json`
 - `translation_notes.md`
-- `assets/` for extracted images, crops, figure snippets, and equation fallbacks
+- `assets/` for extracted images, crops, or figure snippets
 - `reader.html` only when the user explicitly asks for a browser preview
 
 ## Full-text mode
@@ -56,7 +44,7 @@ Keep a stable source map so follow-up questions can cite the same anchors.
     {
       "id": "S001",
       "page": 1,
-      "type": "heading|paragraph|caption|table|table_row|equation|note",
+      "type": "heading|paragraph|caption|table|table_row|note",
       "order": 1,
       "original_text": "",
       "translation": "",
@@ -84,17 +72,6 @@ Keep a stable source map so follow-up questions can cite the same anchors.
       "alt_text": ""
     }
   ],
-  "equations": [
-    {
-      "id": "E001",
-      "page": 4,
-      "equation_number": "3",
-      "latex": "\\mathcal{L}(\\theta) = \\sum_i ...",
-      "bbox": [0, 0, 0, 0],
-      "confidence": "high|medium|low",
-      "image_path": null
-    }
-  ],
   "glossary": [
     {
       "term": "",
@@ -113,13 +90,9 @@ The Markdown reader should support:
 - paragraph-level original/Chinese pairs
 - source IDs on every substantive block
 - figure/table cards near the relevant prose
-- rendered display equations with stable `E...` anchors
-- an equation index when there are three or more display equations
 - English captions and Chinese caption translations
 - page navigation for full papers
 - terminology notes and uncertainty notes
-
-Use `$...$` for inline math and `$$...$$` for display math. For a low-confidence or image-only equation, show the original crop from `assets/equations/` and label any accompanying LaTeX as a low-confidence transcription. See `references/equation-handling.md` for the exact block shape.
 
 ## `reader.html`
 
@@ -128,7 +101,6 @@ The page should support:
 - desktop side-by-side original and translation
 - mobile stacked layout
 - clickable source IDs on every block
-- rendered equations and equation-index links that retain the Markdown `E...` anchors
 - figure cards near the relevant text
 - section navigation
 - page navigation for full papers
@@ -146,7 +118,6 @@ Do not add a question area unless explicitly requested.
 - Do not use a full-page screenshot when the actual content occupies a smaller region.
 - If the exact crop box cannot be verified, label the crop as approximate.
 - For full papers, preserve page order and include a page index.
-- Keep printed equation numbers outside math delimiters and never invent missing equation numbers.
 
 ## Figure/table card format
 
@@ -176,6 +147,5 @@ Use short, stable source pointers:
 - `p.8 C003`
 - `Fig. 2`
 - `Table 1`
-- `p.4 E001` or `Eq. (3)`
 
 For follow-up answers, combine page and block ID when available.

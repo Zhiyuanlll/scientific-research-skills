@@ -151,7 +151,7 @@ def request_images(payload: dict[str, Any], args: argparse.Namespace) -> dict[st
         headers["X-Title"] = app_name
 
     request = urllib.request.Request(
-        args.api_url,
+        API_URL,
         data=json.dumps(payload).encode("utf-8"),
         headers=headers,
         method="POST",
@@ -161,10 +161,9 @@ def request_images(payload: dict[str, Any], args: argparse.Namespace) -> dict[st
             return json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         body = exc.read().decode("utf-8", errors="replace")
-        raise SystemExit(f"Image request failed ({exc.code}) at {args.api_url}: {body}") from exc
-    except (urllib.error.URLError, TimeoutError, OSError) as exc:
-        # A timeout while waiting for headers or reading the body raises a bare TimeoutError/OSError.
-        raise SystemExit(f"Image request failed at {args.api_url}: {exc}") from exc
+        raise SystemExit(f"OpenRouter request failed ({exc.code}): {body}") from exc
+    except urllib.error.URLError as exc:
+        raise SystemExit(f"OpenRouter request failed: {exc}") from exc
 
 
 def save_outputs(response: dict[str, Any], payload: dict[str, Any], args: argparse.Namespace) -> None:
@@ -183,17 +182,14 @@ def save_outputs(response: dict[str, Any], payload: dict[str, Any], args: argpar
             outpath.write_bytes(decode_b64_image(item["b64_json"]))
             saved.append(str(outpath))
         elif "url" in item:
-            try:
-                with urllib.request.urlopen(item["url"], timeout=args.timeout) as image_response:
-                    outpath.write_bytes(image_response.read())
-            except OSError as exc:  # URLError, HTTPError and timeouts are all OSError subclasses
-                raise SystemExit(f"Image download failed for response item {index} ({item['url']}): {exc}") from exc
+            with urllib.request.urlopen(item["url"], timeout=args.timeout) as image_response:
+                outpath.write_bytes(image_response.read())
             saved.append(str(outpath))
         else:
             raise SystemExit(f"No image bytes or URL in response item {index}: {item}")
 
     metadata = {
-        "api_url": args.api_url,
+        "api_url": API_URL,
         "request": payload,
         "response_usage": response.get("usage"),
         "created": response.get("created"),
@@ -232,18 +228,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--background", choices=["auto", "transparent", "opaque"])
     parser.add_argument("--n", type=int, default=1)
     parser.add_argument("--api-key-env", default="OPENROUTER_API_KEY")
-    parser.add_argument(
-        "--api-url",
-        default=os.environ.get("SCHEMATIC_IMAGE_API_URL", API_URL),
-        help=(
-            "Images endpoint to call. Defaults to OpenRouter; point it at any "
-            "OpenAI-compatible images endpoint to use that service instead."
-        ),
-    )
     parser.add_argument("--site-url")
     parser.add_argument("--app-name")
     parser.add_argument("--timeout", type=int, default=180)
-    parser.add_argument("--dry-run", action="store_true", help="Print request payload without calling the API.")
+    parser.add_argument("--dry-run", action="store_true", help="Print request payload without calling OpenRouter.")
     return parser.parse_args()
 
 

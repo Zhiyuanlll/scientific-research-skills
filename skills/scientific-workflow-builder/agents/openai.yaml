@@ -1,0 +1,4 @@
+interface:
+  display_name: "科研工作流搭建"
+  short_description: "从科研问题构建可验证、可恢复、可追溯的计算工作流，并提供脱敏 HEA 案例"
+  default_prompt: "请使用 $scientific-workflow-builder，根据我的科研问题和现有代码搭建可验证、可恢复、可追溯的工作流。"

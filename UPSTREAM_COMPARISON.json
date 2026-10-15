@@ -1,0 +1,1308 @@
+{
+  "review_commit": "19be8d45e0d5233aa44be6d4572e655b9914ff54",
+  "note": "Comparison only; not an authorship or original-install-version assertion.",
+  "differences": [
+    {
+      "path": "skills/academic-writing-fidelity/SKILL.md",
+      "blob_sha": "89f460d81518cb48e1b90101885c4791c6223023",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/academic-writing-fidelity/agents/openai.yaml",
+      "blob_sha": "4900746ae1c2352ff0cbdf8634c9697807677242",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/academic-writing-fidelity/references/figure-style.md",
+      "blob_sha": "5e17c8aacd86b2179cf9b9b1ebf32f73b78fce02",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/jmps-writing-fidelity/SKILL.md",
+      "blob_sha": "4197654104d3f7446c257507105be056c74cb7cd",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/jmps-writing-fidelity/agents/openai.yaml",
+      "blob_sha": "7fbbd4709de84415aab7becc8559220e08631a21",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/jmps-writing-fidelity/references/figure-style.md",
+      "blob_sha": "5e17c8aacd86b2179cf9b9b1ebf32f73b78fce02",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/jmps-writing-fidelity/references/jmps-polishing.md",
+      "blob_sha": "e7a6b30e572b36c2bb3967e60246d045b52930cc",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/jmps-writing-fidelity/references/writing-principles.md",
+      "blob_sha": "3f64ef761076b5fe7697ffae06e34fdc162ed44e",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/knowledge-library-builder/SKILL.md",
+      "blob_sha": "c333c56c21352277c20d3248c487f13e34b37ad5",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/knowledge-library-builder/agents/openai.yaml",
+      "blob_sha": "618e2f3d4fcede4ad01a04fcf3e40edc7424de66",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/knowledge-library-builder/references/evidence-and-maintenance.md",
+      "blob_sha": "b98678e7ba79859d47461b38bf77c3fa2658a3f1",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/knowledge-library-builder/references/library-design.md",
+      "blob_sha": "126628b4046e65d2b4a17eb4b1b835732558518d",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/knowledge-library-builder/scripts/audit_vault.py",
+      "blob_sha": "d74d4b377340cf2c0369421ccb77a1932c9a32bb",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/knowledge-library-builder/scripts/smoke_test.py",
+      "blob_sha": "d735690ffdd9603890b846b5b774a8ffc35be022",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/nature-academic-search/SKILL.md",
+      "blob_sha": "7c6d8d57069ff5b8fb7dce5744d2250d8f2efbf4",
+      "upstream_blob_sha": "9f0b745754a7370de70ae2c82d56ea89702b22ab",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/mcp-server/academic_search_server.py",
+      "blob_sha": "d86a6a2cf5766f9a7e2af6a398cc5f9119a89e98",
+      "upstream_blob_sha": "145db1079495813f034d152fb8f2650b6a868b34",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/mcp-server/requirements.txt",
+      "blob_sha": "a29502ce5fb17a36e72861ec3b41989ecc3fe423",
+      "upstream_blob_sha": "8a637f1abc9f0133898bef006275320a35d2327f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/mcp-server/sources/arxiv.py",
+      "blob_sha": "7c70769f43f00478ec985db45868c4559661bef7",
+      "upstream_blob_sha": "66321481b41476b8ef21005c60f35d69292f5dea",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/mcp-server/sources/crossref.py",
+      "blob_sha": "6b74598c36ab861914585ff6dfbacfdc0f2fe25e",
+      "upstream_blob_sha": "d8dd48380bc1e5fb289247739bb1dbe0361d0d65",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/mcp-server/sources/pubmed.py",
+      "blob_sha": "39e6ef8d8f462d2b18c5c6fe51ae2905f2e50734",
+      "upstream_blob_sha": "c0383c15f1f007f25cdbd6f9d8a07cc055c19fd2",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/mcp-server/sources/scopus.py",
+      "blob_sha": "91c95c0d5e6180fcfcc6b7e446c2a45bceaaf82b",
+      "upstream_blob_sha": "64c432f366d91e1cda900da9393031b89f3e60ab",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/mcp-server/tests/test_sources.py",
+      "blob_sha": "dfe6b4559360ad7564d0d414513243aafca45863",
+      "upstream_blob_sha": "9f2aeff96f9b401604fd0d472c5a4fa657853183",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/references/ris-bibtex-format.md",
+      "blob_sha": "ef75e626da16457dff80087fc6cf4b9f000b7b1b",
+      "upstream_blob_sha": "b385ddf14a617af9b0bd16cbc26f6c3b664e305a",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/references/workflows/wf4-citation-file-mgmt.md",
+      "blob_sha": "b5034bd4214f8a69f596bdf5a73338de1856617c",
+      "upstream_blob_sha": "7504739d28021d712e795bb8d83c4c7fadf3bf10",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/references/workflows/wf6-strict-other-citation-impact-audit.md",
+      "blob_sha": "a14866b528e0a7087699f1c4f2efca7bd2422c09",
+      "upstream_blob_sha": "3c3e10d94fff2efdfff36559003a7fc8b826c6a5",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/scripts/converters.py",
+      "blob_sha": "426fb4f7ecb613fbf94ce805096e6256abad6bbd",
+      "upstream_blob_sha": "f0cd4b8519f1202db56775c863e4f2317b962c35",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/scripts/format-converter.py",
+      "blob_sha": "f3a2597d0a83f0d27ff4973a7fbf0294b101bb18",
+      "upstream_blob_sha": "d098af0f77601cf711b36bfd24bfc686b67ec932",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-academic-search/static/core/routing-and-ops.md",
+      "blob_sha": "6b8a7e533fc349adda406b2ba00a4558d71a8d5a",
+      "upstream_blob_sha": "0590103fccd301c24375bd0ff5be6419effeb818",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-citation/README.md",
+      "blob_sha": "c27b319e79b7e6fd64d5d1233ad0346e75bf92b1",
+      "upstream_blob_sha": "01c2fdca6ca6809ace4a10756b8064d35dfbf548",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-citation/README_EN.md",
+      "blob_sha": "c01090454981169f4f305e6d3e9bdc2693c7c895",
+      "upstream_blob_sha": "629b5cc81342f9cbd9285dc76d16dfd71bb33bdd",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-citation/SKILL.md",
+      "blob_sha": "ff6e234961c12fcffbdc5165304da4dd36f1a78f",
+      "upstream_blob_sha": "c0e85baf38357a1bd149e4fd3e2808d266c5bb6d",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-citation/manifest.yaml",
+      "blob_sha": "bd37a8aface0e4a98065688427ba9b1501c5ab9d",
+      "upstream_blob_sha": "53b7812e36b9f23226fa0b753f28ca8ca292ebeb",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-citation/references/ris-endnote.md",
+      "blob_sha": "d3ee7068675221e1666c6a492867494754db73b7",
+      "upstream_blob_sha": "f1e9bc8976bbd7aff5bbf613413e33c415cab21a",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-citation/references/script-usage.md",
+      "blob_sha": "9d7e7455f5ace18e047a2c697f8474334acd984d",
+      "upstream_blob_sha": "9741a29cdc32e7292e9e276dace84a967914d806",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-citation/scripts/nature_citation.py",
+      "blob_sha": "0140e3673d8bd9fdf418c461f1a6f61ab0c2ddea",
+      "upstream_blob_sha": "1ba4486e6701d8e681425e060b514d7833d52e35",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-citation/static/core/workflow.md",
+      "blob_sha": "a1d2ac68736570dd58af175f1f407b162e527556",
+      "upstream_blob_sha": "ff10c408c957d2d66e7779bdf221b6e4251877d6",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-data/README.md",
+      "blob_sha": "2c6b76054b52918b96280370775d69a9433b1e49",
+      "upstream_blob_sha": "5b845a2335a97fc86436248243df8b33ee3bd691",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-data/README_EN.md",
+      "blob_sha": "f11f4b574584c739bf99bfcaa22ee87af40aab37",
+      "upstream_blob_sha": "4e20b02f1240e4eebf9f9d0ba401a69aac1dac82",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-data/SKILL.md",
+      "blob_sha": "93adbe5021c2d9dc8cd4ee9a48810e5c31fc69de",
+      "upstream_blob_sha": "5275750616e1b8f28be3ce260db5dc85bef33648",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-data/agents/openai.yaml",
+      "blob_sha": "56c8ac0d09d63041b3fd832e0c98f93c3e3c7c26",
+      "upstream_blob_sha": "d2c53ad3bc52dc5c91d08ea19b13e9a1c2684128",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-data/manifest.yaml",
+      "blob_sha": "2f39d87d387d5ce5d2bc0decb5304ddc4867d1b0",
+      "upstream_blob_sha": "48c4fe3d10b5ebc526fc1f225ca9edcc52e6e791",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-data/references/fair-metadata-checklist.md",
+      "blob_sha": "f97e4b34b9025a8d0199074d27804c7d8a97e89b",
+      "upstream_blob_sha": "d5f9f135bac7babd4a816b11c1c74cfae4de7f7a",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-data/references/policy-principles.md",
+      "blob_sha": "507d7b832a8f7ab4ff1bdefd231013057298a7b0",
+      "upstream_blob_sha": "fe54c34f249fb22d7fbe7b90b1aa06ba2923e5e6",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-data/references/statement-patterns.md",
+      "blob_sha": "2bcb86409d8758d3230f9f081524d98f26b410a8",
+      "upstream_blob_sha": "7e136d692edbc58cf9f5e173f8638b0ef1face78",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-data/static/core/workflow.md",
+      "blob_sha": "903235b8103776ae52a5b6d0d97b10dc2b24eae2",
+      "upstream_blob_sha": "ff2df21a06f4ff2f942cfddfc794002f4366dc37",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-downloader/SKILL.md",
+      "blob_sha": "6e12d4349595de1638c09cf572dd8d9717113e0b",
+      "upstream_blob_sha": "9141804a3317183ad628f78f67b40138ba77a83e",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-downloader/agents/openai.yaml",
+      "blob_sha": "1c371ab2911a6104b5ddd3f4a4ced0ac986898e8",
+      "upstream_blob_sha": "f94111e1e90f2c8b7b60ff20caabcdb10d23ffcb",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-downloader/manifest.yaml",
+      "blob_sha": "419f9bd18295855c0bdea2cbc52a0b3b1d93a7a5",
+      "upstream_blob_sha": "4a7e3a9b03d9a6503d9205a89691de565fd7a73f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-downloader/scripts/lib/direct-download.mjs",
+      "blob_sha": "35c57d7183823ec8bb68853544ff5f5bd6cc671e",
+      "upstream_blob_sha": "614700dbb4de8b76da75e87c4d26ee46337ec202",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-downloader/scripts/lib/open-access-provider.mjs",
+      "blob_sha": "7a8cb7874af82fc07fdcf3f62324a3be09225455",
+      "upstream_blob_sha": "96468044add6a5668e7976243df83e73b2c2cae8",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-downloader/scripts/lib/pdf-utils.mjs",
+      "blob_sha": "af9763d1b6651df8bab2a14256bcab6e40863a4d",
+      "upstream_blob_sha": "cf2519bbbf956823c248290d236b79a2c4b91cfb",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-downloader/tests/unit/open-access-provider.test.mjs",
+      "blob_sha": "763c2155a50646bb7edfba34bb58e0f62e762638",
+      "upstream_blob_sha": "22bb7aaca0486561c017b7f3a07f11f24e386086",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/README.md",
+      "blob_sha": "1a8b0d55847974c9fcd37568a720a0cf6d6f4867",
+      "upstream_blob_sha": "31c5db2f85dca9848a03e46d4a12cc9183aa0a78",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/README_EN.md",
+      "blob_sha": "a77801746d5e536f4c1ee1b2f6e4a83c9ddc5916",
+      "upstream_blob_sha": "391cc3eb69dfe0b82e919d2c3a28689622693bf5",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/SKILL.md",
+      "blob_sha": "996da138079a1716464f1878e2e6e527c8b6423f",
+      "upstream_blob_sha": "72a1c90240e74ec4b0690d61bba1d0b73ccbff22",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/evals/evals.json",
+      "blob_sha": "c8ecf38ea58f88d50d6892c3ad44a5279f554005",
+      "upstream_blob_sha": "85420e7becea134757fadc6b6ea97832d89295ad",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/manifest.yaml",
+      "blob_sha": "b78cfcb8a0f144b8bdc7f45e3a4f44f18baab3c1",
+      "upstream_blob_sha": "f7c35c7b2819cf7856bc2f816561ecc0c0853888",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/api.md",
+      "blob_sha": "2737ea20431cfed64cc71e5b6336a7dc7b95b266",
+      "upstream_blob_sha": "98e520564a2f3f4eedcf1295ef1b6a7221a4a266",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/asset-adaptation.md",
+      "blob_sha": "33e644a4a62dbaa89ed1a6402164fe3b650d420d",
+      "upstream_blob_sha": "f8ce788c87836e0b11c457cad8e2a14bdd9b1aa4",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/backend-selection.md",
+      "blob_sha": "68292e5afb136b90cb00bb8f08fad1444659adc7",
+      "upstream_blob_sha": "8788ff871b910978beb2ea8617d2032ad6981529",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/chart-types.md",
+      "blob_sha": "aa4a7e1ab86a53c4836bb322aa2e860851b5a615",
+      "upstream_blob_sha": "e8e05a500f69ec6093910ca70d17905198562092",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/common-patterns.md",
+      "blob_sha": "8e15c95cc86d2ad94eb4f86651d23c389ee5a8ce",
+      "upstream_blob_sha": "68efbd84f625ee12d208e5c8e9c7159c82aa4a0d",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/demos.md",
+      "blob_sha": "dca50ebeced2816be7212184700e74b3f580deb3",
+      "upstream_blob_sha": "71f0cfa0830952e1034a8b6b55cd3f0c5ba5e805",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/design-theory.md",
+      "blob_sha": "4b1d1171d1fa8eb855ebe966291c032addb2c154",
+      "upstream_blob_sha": "4c1e107b31be56c4e322ab984219646818d18863",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/figure-contract.md",
+      "blob_sha": "5917be725e126c45d491a819a665da580b66b2ec",
+      "upstream_blob_sha": "98775b359a93e50171c41a549fc77c33490b1685",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/figure-legend-conventions.md",
+      "blob_sha": "f5375db91ac5bcacb094a0059ed91c22e55b3ba7",
+      "upstream_blob_sha": "93ab8b4d31616d2f2f59f1d1befe29a72a272091",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/nature-2026-observations.md",
+      "blob_sha": "9f7601dbb9438138d1faa37f5f87870e7ef37480",
+      "upstream_blob_sha": "ab8b40ea9c0317872c203a28676569a97eea6103",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/openrouter-image-generation.md",
+      "blob_sha": "f477696e09013151573b335ab8de270b4a22caea",
+      "upstream_blob_sha": "e500890e7a82a998dc081e81141c350f082f37cd",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/qa-contract.md",
+      "blob_sha": "da04812c3535be134f398d26c539ebe0666bc441",
+      "upstream_blob_sha": "67ca6a6bf1e173b87b8c127afede10a0c2662fb7",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/r-workflow.md",
+      "blob_sha": "4b4516a40a53ba7a9363df4b80ff85651af8e3a0",
+      "upstream_blob_sha": "fea925dd82eb211dad8ceba3e76ce81d066c6096",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/references/tutorials.md",
+      "blob_sha": "38f584253f13818bf6293b0f2218cc09254d15f9",
+      "upstream_blob_sha": "5e0ef5dca5d7c45e5ab0c1f30cd031ad65e40016",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/scripts/generate_openrouter_schematic.py",
+      "blob_sha": "1cfcc6a27d6bb55a911feba8a8c0d3d2351ea1cd",
+      "upstream_blob_sha": "8ea6604556873017a2f82c2a26bcbc214af3f56e",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/scripts/nature_figure_backend.py",
+      "blob_sha": "c996a916cf25ae6c83db11dc5de963bd80272d04",
+      "upstream_blob_sha": "94b94b102c44b133b016314c12752f3197c4f08d",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/scripts/plot_templates.py",
+      "blob_sha": "06fa5aaec99beee87fd7a316222792bad4092780",
+      "upstream_blob_sha": "77d3181221ee320d075b7b4ab018383552d825c0",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/scripts/validate_figure.py",
+      "blob_sha": "fd538738c96e6108b0383e1431f84fbd90287005",
+      "upstream_blob_sha": "1b52e32a6913cfcdf76507038d761aa041e0b974",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/static/core/contract.md",
+      "blob_sha": "bc87f64a94f760df17d2d8e8669db1109dffab83",
+      "upstream_blob_sha": "22ad7508eb267f3abdfbfbd118bd72f0b1a48c66",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/static/core/stance.md",
+      "blob_sha": "b5555b829bc2c7056266fc060b6fd3c675be58ba",
+      "upstream_blob_sha": "130491f61c599023d4ccb760810c8be8396715f5",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/static/fragments/backend/python.md",
+      "blob_sha": "05174f5a7eb1e373197813704e2f8e2430912b85",
+      "upstream_blob_sha": "0f1647fd92f92215320ceb30d5a9a2eb25cc5281",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-figure/static/fragments/backend/r.md",
+      "blob_sha": "36e71fb5d2ba2633f70df3066e9c214d6a693c56",
+      "upstream_blob_sha": "57b089472105f2a7892e49460653e7b47fc6d917",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-literature-pipeline/SKILL.md",
+      "blob_sha": "5c9f3669f89f5d00f8d97e63da5cd8ff09474b2f",
+      "upstream_blob_sha": "54fd9b9ef43c60da2ce8d32e09dfc4cc348a898b",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-literature-pipeline/manifest.yaml",
+      "blob_sha": "4a7bb0430f781456b1261a50dc7003b30b19aa11",
+      "upstream_blob_sha": "37e6bd1b5951c19c7a79027e0e3cb2246b96046d",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-literature-pipeline/references/cron-setup.md",
+      "blob_sha": "d29068dcc553a8004e16403d931299c099311089",
+      "upstream_blob_sha": "71c81f2144d7eea47fae8ade44f9e4e8a8ad71c6",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-literature-pipeline/references/note-template.md",
+      "blob_sha": "4f19c6e8ea827158cdef88a5359f41e3ea706e81",
+      "upstream_blob_sha": "a5b79e7879a75c8970b2ebcb6368b5a8817f5494",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-literature-pipeline/references/push-format.md",
+      "blob_sha": "d5e48eeb0442e38d8ea765bc9e847b039c3d8c6f",
+      "upstream_blob_sha": "82be5f9a1d3e489d5c2218a160adbd091677a23c",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-literature-pipeline/references/review-compilation-workflow.md",
+      "blob_sha": "fca5027646dcdf55a5443923fd83b0740b690edd",
+      "upstream_blob_sha": "19edc5f2258667944c232bfaabd164f38f3a9d70",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-paper2ppt/SKILL.md",
+      "blob_sha": "130ba9e3d00e0a1ce7bf17911a5213462c8ade58",
+      "upstream_blob_sha": "c7b5a02004bb5e0427c6957aa6bfd99fe7d37117",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-paper2ppt/references/design-and-layout.md",
+      "blob_sha": "ece657602f4cefba4cf4af90e9f2f8c851b2fa00",
+      "upstream_blob_sha": "5e01d93f639609404f3917735511b8bb4a71cb10",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-paper2ppt/references/self-review.md",
+      "blob_sha": "91a2c1727aff90c705cd33acf8762cb764573edc",
+      "upstream_blob_sha": "335f5b3024a3806b770af9792f988f45f7814654",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-paper2ppt/static/core/output-and-quality.md",
+      "blob_sha": "d68ba94875bf11ae237d8bcb8279d0702898a2a8",
+      "upstream_blob_sha": "aeff207274e5bddcae33b5af5d0f0c872d4cedfc",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-paper2ppt/static/core/principles.md",
+      "blob_sha": "5aa13a5a2ba2fa46896b28a3d24dc6c3bab260d7",
+      "upstream_blob_sha": "5908dc718a8149d6b1aed02a55f6f8bea8aaa8d4",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-paper2ppt/static/core/workflow.md",
+      "blob_sha": "959b329f23f348ce06f3a3ea44565ea61303796e",
+      "upstream_blob_sha": "7ffba544aad744962f49a5c18887837efd030d13",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/README.md",
+      "blob_sha": "52e6502f61b59940676bf614ba8829083051f6c7",
+      "upstream_blob_sha": "1ba000d4b45142e0566abc4ac75a8dd470ece477",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/README_EN.md",
+      "blob_sha": "763795c376df16c3fa35b8f46e0dbdbe4c8f8f13",
+      "upstream_blob_sha": "4e2bb91fad47b32a1ed179f93abcc86fdc115cf8",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/SKILL.md",
+      "blob_sha": "6c6d7f39351c7a25cc84cc5559de0d9b6fa7d3c7",
+      "upstream_blob_sha": "23b312f9ddf0a03971df0d11cbd2b42fed4e1821",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/manifest.yaml",
+      "blob_sha": "75eae7a2cd8dec776bbfa6c0361e254392b66d69",
+      "upstream_blob_sha": "1a01c3e677cfd347a70757c832b603682cfaa2c9",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/references/latex-layout.md",
+      "blob_sha": "6a922393806477dd76fbf78d88a09e31ba6d378a",
+      "upstream_blob_sha": "69f6a92442da91d695ce64fb840b3efe86dfa51e",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/references/phrasebank-playbook.md",
+      "blob_sha": "360ae4da0d7691d3131f8366d44e46954ede594a",
+      "upstream_blob_sha": "050b7f578bf64226a3d2253b556d5f6f03576a80",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/references/published-article-patterns.md",
+      "blob_sha": "d84bb574dd68366d9253b800ada6a37de63c2af4",
+      "upstream_blob_sha": "8041675cbe27a14a5328533bc90d8e48e746df8f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/references/section-moves.md",
+      "blob_sha": "0699fcf9db4da600450829f2feaa9fbbac4d0f60",
+      "upstream_blob_sha": "48ddf67653b650a3c6301bab1a00fe997d721a6a",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/references/writing-strategy.md",
+      "blob_sha": "a2a5543f47571d1683930d8dd3e47ca198e64a11",
+      "upstream_blob_sha": "50b004318f6df24441d30a8460e6761b85bdf2ec",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/static/core/failure-modes.md",
+      "blob_sha": "7621ce2ca2873a202e3758540576045c782a56f0",
+      "upstream_blob_sha": "52e6d7cb8fbb422dc54844c2247a0f769cc35586",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/static/core/output-format.md",
+      "blob_sha": "99fe89312414f61a16b65f96068c420bc7529886",
+      "upstream_blob_sha": "3b60aba9df07dfc8bb2d610993db8f6cf53fd403",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/static/fragments/journal/generic.md",
+      "blob_sha": "721427161a161f59b85d5b253b18f276280b9e2a",
+      "upstream_blob_sha": "8f0efe9fb72251a1358adf3e9d7bfd09c9b94494",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/static/fragments/journal/nat-comms.md",
+      "blob_sha": "70cc3773409461867a44f1d306d2a240f3ff2363",
+      "upstream_blob_sha": "962b24bd355d2c189978fcd2ae3640ab6e5146c3",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/static/fragments/section/abstract.md",
+      "blob_sha": "c2d1e85ebf01b4ed1bf5091451397e2bc2ad346c",
+      "upstream_blob_sha": "3d97afcaa0745cda2e09df91635e77d5e55619d7",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/static/fragments/section/discussion.md",
+      "blob_sha": "c729d1466077ea1ae1459de671fdf69a651b022a",
+      "upstream_blob_sha": "a556a42e2b3f7415e5a79d65f9d673a9c1d2e152",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/static/fragments/section/intro.md",
+      "blob_sha": "1a32f156bbca8d895774165e529643f82a1aacb3",
+      "upstream_blob_sha": "7f921c5ae22aef461b0e82a9542387ca23018b24",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-polishing/static/fragments/section/results.md",
+      "blob_sha": "832ab7972dbf0f639bafdff3de39fc7eb7362ff3",
+      "upstream_blob_sha": "3d8446b631a22254c85711f402eed864bb1352c2",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-proposal-writer/SKILL.md",
+      "blob_sha": "35be6a8030112e5dc742fa80c8de50b366603ce8",
+      "upstream_blob_sha": "4b149881086168cbb6123b5bf0cb2d954d75ad3f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-proposal-writer/manifest.yaml",
+      "blob_sha": "d52d4e0ad54b881e1f9b67534d53cf1b44188675",
+      "upstream_blob_sha": "0fde47b0a0c8285930016b157520dd86f84be6f3",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/README.md",
+      "blob_sha": "682d4b602538f4758abebe5dd8578acb08fcff79",
+      "upstream_blob_sha": "98ba2ff831be7ef95a93f29c912972f3c9759ada",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/README_EN.md",
+      "blob_sha": "26db05bd1ef3a406d16879ce741963066a8f5816",
+      "upstream_blob_sha": "0550454b0d6b2e3ce13e8685c564c701af6d7eea",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/SKILL.md",
+      "blob_sha": "db013d451ecd69eb034722ca3253406d8385dc8c",
+      "upstream_blob_sha": "cf8d3cbe6917d962fbb43de9218d4fad5c01e89f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/evals/evals.json",
+      "blob_sha": "1e2d2c162c991944fe5e476fbec4851291a37446",
+      "upstream_blob_sha": "97e5673812935c712f7cada8b41d38d937c5fd5b",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/manifest.yaml",
+      "blob_sha": "e9f98484bb44765f7627eb5db1cfd1b199f31b99",
+      "upstream_blob_sha": "3ed6df0cec8f27bea44a64e0780df367c926175f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/references/grounding-rules.md",
+      "blob_sha": "8939d01fa72781b369dc4c9abff3f622b344fc6f",
+      "upstream_blob_sha": "44ddd8d3d1af95765ed1d50a10d9f6c26f4f89ed",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/references/output-spec.md",
+      "blob_sha": "5bb9eac07e9e53b33a3056fff76956af841551ae",
+      "upstream_blob_sha": "fbbce2855360dbc820c58960f83dc3c282e90f6e",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/static/core/output-contract.md",
+      "blob_sha": "cc4978300561558b57754f2ff2d546938c3b9c33",
+      "upstream_blob_sha": "e901feebe26af76e7c8a58c8e90a17e62b54ad46",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/static/core/principles.md",
+      "blob_sha": "d0838dd2d3372e1f669ad8f02e79be7b165e9f98",
+      "upstream_blob_sha": "1075068f23267e9f17e28ad306f40c5908169e59",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/static/core/workflow.md",
+      "blob_sha": "1c511d856763f3a4fcc21e029432c003bd7c099c",
+      "upstream_blob_sha": "fba7467ae6aaacdad1c3efb50970653b17e94478",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/static/fragments/source/doi-arxiv.md",
+      "blob_sha": "fe80d70b4a50a1ad1cca54c900bcd14ab545fdd4",
+      "upstream_blob_sha": "6dfb9a1a1f82e19cc01513c35453dc19c5cd80e8",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/static/fragments/source/html.md",
+      "blob_sha": "698682ee4e2136755cbb8f0e97c660d4385accb8",
+      "upstream_blob_sha": "4cd42fd9fed3bf5b632dcedc05951fe14657b74c",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/static/fragments/source/pasted-text.md",
+      "blob_sha": "1ff617451195a38890eec2ce20c5f5d06ddcc286",
+      "upstream_blob_sha": "44a1180c5458c9570c0e9988a6acae4bbf18db48",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/static/fragments/source/pdf-text.md",
+      "blob_sha": "d4526bcfceec971d45dfc9e882ab5bc06b6dddc5",
+      "upstream_blob_sha": "7d48d48582690ab4854aa43c8b9b10bde0ee895b",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reader/static/fragments/source/scanned-pdf.md",
+      "blob_sha": "94a5eea1641a6b5484f618a18cd0580a6f2f6032",
+      "upstream_blob_sha": "6ee0c228ef2420d42b84e93cbcffc87ec9ef72a2",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-ref-verifier/SKILL.md",
+      "blob_sha": "5dad736fb81c150a87115a28ab8e9af1cf9120c9",
+      "upstream_blob_sha": "8d0216f4de9d641e265fb07194929fd41b66fbe0",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-ref-verifier/manifest.yaml",
+      "blob_sha": "8fefb75e22595072c3dc17159ade1b7aae3dfc47",
+      "upstream_blob_sha": "0e394b6f94bd41300ebc134dd0802eb78c796325",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/README.md",
+      "blob_sha": "144de94488017b71314c6f5da077725586d29b4d",
+      "upstream_blob_sha": "f04df777208c91c2bfeb1c0b1aff6035ed8262c4",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/README_EN.md",
+      "blob_sha": "987171c5f2a3ba04881045e0d19c5e8e6929ee8c",
+      "upstream_blob_sha": "66fd939c4232b383a81a3ee189af68d4ab385a0d",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/SKILL.md",
+      "blob_sha": "0262f4a432bf9a8eb03c6fb13fb1efe69ba95590",
+      "upstream_blob_sha": "bbe80f90ea78f4d2550ee9b2ba6b75d4b66cf087",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/examples/conflicting-reviewers.md",
+      "blob_sha": "79e1ac107b2f974be5f435ff7d8281b80e1f3979",
+      "upstream_blob_sha": "dd06e2ba8547582f35ff36b3adadfdba37ef2c0a",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/manifest.yaml",
+      "blob_sha": "4ec03e8ef6195416c6cdc1349563d0c93769140c",
+      "upstream_blob_sha": "bd42cb838aea740c262e23d0756cbdd231dbb8f1",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/references/action-mapping.md",
+      "blob_sha": "9c12e2c5cd9ce3d3ca4abac064f260d05da5b8f3",
+      "upstream_blob_sha": "e1ae2516fcadc04dd4728e1ae5cc80f63990338e",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/references/difficult-cases.md",
+      "blob_sha": "df784ae6ae163571adf7d3d01c366e1fa4f36411",
+      "upstream_blob_sha": "4a68f41c36338a9022a6bb4dd224202ac0c8bf39",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/references/intake-and-routing.md",
+      "blob_sha": "7c72e772061c4eec1a09d55d5f442885abb25921",
+      "upstream_blob_sha": "b96f54a378a9c1153b6915ff451c9a844baa9b99",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/references/latex-templates.md",
+      "blob_sha": "f14b67a6e0f923c95fa0370a703539f58670cf38",
+      "upstream_blob_sha": "b86c4f525d17c8b851bbf1b317b3e7527613377a",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/references/qa-checklist.md",
+      "blob_sha": "f025e110a6849428df7ef48d8504bec10c5d5616",
+      "upstream_blob_sha": "45ebab7a29b1a63426780dc0d642f36915cb0ef8",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/references/response-structure.md",
+      "blob_sha": "9151d710b83544a12e8f4663ff564587d17a5b6d",
+      "upstream_blob_sha": "ef417099fd1a49495cf14c96c50d9a4a81e1fc63",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/references/source-basis.md",
+      "blob_sha": "c274ec14dce5cd108cc1ec8cfa3d510112420c93",
+      "upstream_blob_sha": "cf8de9e5a140c821952734610651086dcfbb4e87",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/references/tone-and-stance.md",
+      "blob_sha": "02fbcca000eeb9ce993da7a76d4defdc3d4c602b",
+      "upstream_blob_sha": "e1c35faf48b63660d3e9efcf5d667a9ca4d9feea",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/static/core/stance.md",
+      "blob_sha": "c97880f529f4ba541e86270930158cf0d10613ab",
+      "upstream_blob_sha": "a85e8800a0d063c50c0f55a4f5dd044074431013",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/static/core/workflow.md",
+      "blob_sha": "ad137126caf996d638d19f6a497a5e578795e189",
+      "upstream_blob_sha": "32271b3463409afdfab8361265616091642f92e0",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/templates/response-to-reviewers.tex",
+      "blob_sha": "0f58013228bec21b4aef3536a82f29201ec59aa5",
+      "upstream_blob_sha": "6686a1317c821008fb086abf15a67e5053d4e025",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/tests/conflicting-reviewers.md",
+      "blob_sha": "afb68824c47b953414be925a60f1941f7ac0747f",
+      "upstream_blob_sha": "acc099bf30f0f4b3dc97c4afebcfb85e091aea9f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/tests/defensive-draft-audit.md",
+      "blob_sha": "c02e5c8a8a900d2789c263bab072898ebdf68407",
+      "upstream_blob_sha": "b09b81be8ca18f85b094a3f9ee2ba9109fdcec92",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/tests/evaluation-summary.md",
+      "blob_sha": "7b3397724631b7bbe1d10f0738a1095c1fa7ef42",
+      "upstream_blob_sha": "aaace4d59955f9059d0c075ae9ec56174d424dd0",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-response/tests/rubric.md",
+      "blob_sha": "98a638f86163c300395c87543d557d0efdfc5590",
+      "upstream_blob_sha": "8b5c673df54a020eed165c73630aeed086eeffe3",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/README.md",
+      "blob_sha": "de3a362b84c13938104aeaa91df8ee40bf4a4b72",
+      "upstream_blob_sha": "6d1eeca3e26f4ce314aefd571d8056f934b024dd",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/README_EN.md",
+      "blob_sha": "49d4e0b288090a9fc01327475b519a47e1ad3f2a",
+      "upstream_blob_sha": "11d3d1414a39837e5408e87468ff6b5cb73aeae5",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/SKILL.md",
+      "blob_sha": "3b14936339e1d822def667485a5022dbbf750bd5",
+      "upstream_blob_sha": "04938b9c002d929365a84ddcedff577a39713178",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/manifest.yaml",
+      "blob_sha": "cdba03bec48ea9f65e41eeac85a95ac91a9cdc46",
+      "upstream_blob_sha": "7b30ed01635372c9cb5396ed022edf67abafdb77",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/references/domain-specific-review-gates.md",
+      "blob_sha": "074ba9efc4020eb5863c4fe8c4f6b554dd6a11a9",
+      "upstream_blob_sha": "dd44ab713c5ba910025f4aaa180f5ab4a3ef1f22",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/references/qa-checklist.md",
+      "blob_sha": "e3966d1a7e4bd7870330e83c4f0728ee483802ad",
+      "upstream_blob_sha": "6ed341c857b13ea6481302c6904b31d892f7129d",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/references/report-structure.md",
+      "blob_sha": "014ff7662b1a35c9983558a367fa79f560e4cfab",
+      "upstream_blob_sha": "9d86196f51116fb78a8416ba47903357fef9c1ed",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/references/review-axes.md",
+      "blob_sha": "4c75128da3597f4ac51a2feff8f2c9f7820dd3ac",
+      "upstream_blob_sha": "a7f8feabeacabc212816a73cac9219449c65b7c5",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/references/reviewer-workflow.md",
+      "blob_sha": "2e64bcd0e22d3ec47cb82f8292869b0492f49287",
+      "upstream_blob_sha": "b5c5b498a570dfd6147020ab9e80132dc8c5086f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/references/role-boundaries.md",
+      "blob_sha": "fe0e2cc04778c0ef2758e179b98c028e98ad01f4",
+      "upstream_blob_sha": "a37906c3158896f833797768ab9268b0b862cbfb",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/references/source-basis.md",
+      "blob_sha": "50b341d47ee90133b2d522f797cc89e9c41a6f59",
+      "upstream_blob_sha": "1b44dcb64e99501d53bf9b2d49fe94f2abd385e5",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/references/technical-concern-taxonomy.md",
+      "blob_sha": "4e1e907f29027f2f923254cdc2c87baac7ecbfb0",
+      "upstream_blob_sha": "3f3d55a233b095af8baa62a0cd7891d49738c8ee",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-reviewer/tests/traceable-review.md",
+      "blob_sha": "ab3df75b01f252130cc504e701af6a14b2d61e84",
+      "upstream_blob_sha": "b7744ec3c64a0cfeab210003b29404e92a5c400c",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-shared/README.md",
+      "blob_sha": "7f4a117de9dde596ec1120b5477de0e00bda5941",
+      "upstream_blob_sha": "901e98721e66ccaf22197450fb6d84bde79a8fe2",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-shared/README_EN.md",
+      "blob_sha": "4232d2aecadfea5429fb032ca7aeb312aaa8ebe0",
+      "upstream_blob_sha": "46b8430db0bf58621666624aefa47fae5fe328fe",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-shared/SKILL.md",
+      "blob_sha": "96181bb01c93e9abaf620e5ee18300118df35b8f",
+      "upstream_blob_sha": "4d86c541763dde0bf09d3614731e7091394c73cf",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-shared/core/ethics.md",
+      "blob_sha": "0a2c7c9b3b20182cdca99aab33ad228458865448",
+      "upstream_blob_sha": "a6e6d063a8a41bc2294f02820265700272024c37",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-shared/core/manuscript-register.md",
+      "blob_sha": "35a88936982eafb966e6847377b6dc9cc800afbf",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/nature-shared/manifest.yaml",
+      "blob_sha": "46885cb2c7b4ae48cec64c6abfbee26878ca4a47",
+      "upstream_blob_sha": "0072a5b368fcfc47aa13453fe771efa583998b9f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-statistics/README.md",
+      "blob_sha": "de4e8175dc920d2cb3b109cc1ee1028da30cb79c",
+      "upstream_blob_sha": "27619a4225b1cafa60c4dddede70fb19bb859de8",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-statistics/README_EN.md",
+      "blob_sha": "9a86c11a7e2dd1184eaa925f39b61c5554a93336",
+      "upstream_blob_sha": "4b0bb4148e8118e6343fd0a5061a784fbaa1d49b",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-statistics/SKILL.md",
+      "blob_sha": "78ca63025a30fbb8732af793cf2f4ee5d51a811f",
+      "upstream_blob_sha": "24cb638e380a3c7667884eb9bf1f5e1385ba6c36",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-statistics/manifest.yaml",
+      "blob_sha": "59cba5da9d393447e7500c51adc45efba65817e8",
+      "upstream_blob_sha": "1ea450b25408fc5ed8a1fbeb034e3b804007044f",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-statistics/references/common-failure-modes.md",
+      "blob_sha": "cf361af4f6b4687c2b31c6bf242ba266345db9b1",
+      "upstream_blob_sha": "b87f172c53145d19ceb4836a183a4080bbabd5d5",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-statistics/references/source-basis.md",
+      "blob_sha": "d4ffe96faf0be410964a642fb31a197373db9210",
+      "upstream_blob_sha": "5be35af49549928883041ffd9754724c324e2451",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/README.md",
+      "blob_sha": "c448d261542d84eef04307c7331ccbfc80bf8c36",
+      "upstream_blob_sha": "eb1d15849de7c5854db95616f1156d9161c22e8a",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/README_EN.md",
+      "blob_sha": "2ad0ac7acd7d97aad12ecdbe6264f02ccfcc51ab",
+      "upstream_blob_sha": "e86b9d6cac06fd43d2d304586a8024aee2c751c0",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/SKILL.md",
+      "blob_sha": "58d234dedc3a42354c77c3d1f4eba2cd753fd82c",
+      "upstream_blob_sha": "15824495c1ff934b12c1f2ba65ccf4296f8a563a",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/agents/openai.yaml",
+      "blob_sha": "861c2da4ff814b1a52b17f8f0ef4538efcd3a372",
+      "upstream_blob_sha": "6b02b85c5774361728f284da4ee82f6e34323053",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/manifest.yaml",
+      "blob_sha": "10b09052b3b6120d99f01a0357e9375c590446f6",
+      "upstream_blob_sha": "f0e92576c732c710e154626216f00a161ac5f54c",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/references/abstract.md",
+      "blob_sha": "73f687e78bc88bdad2fbdc723d398a75f7ffefc1",
+      "upstream_blob_sha": "2bcd3ee42b4cbac33056c21a94e211b44de06062",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/references/article-architecture.md",
+      "blob_sha": "97de24210299db3f4e776917d0212a5d0aad669c",
+      "upstream_blob_sha": "0a795e797342e42c219754021adf4e9b9f681c63",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/references/experiments.md",
+      "blob_sha": "5b42791ea13e32f3c6322ea4428662296ef387e7",
+      "upstream_blob_sha": "6e76195b742c526368774d0a6572f0f2cd33c26c",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/references/introduction.md",
+      "blob_sha": "d678070ce8f4d6ff3764f3c5103fdd49a21755f8",
+      "upstream_blob_sha": "5babc13f1e27a53e8f426587f4ba233cfef5c255",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/references/method.md",
+      "blob_sha": "667fcfe3b7f59e7885b1ba1031a26377dc6f489c",
+      "upstream_blob_sha": "b9c3820c9293ab75c463d72d8b082df21f37cc9b",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/references/nature-summary-paragraph.md",
+      "blob_sha": "d9d86a3f325dae5dd55162e6199822a0a7893de3",
+      "upstream_blob_sha": "4e9b7942032ec0e6f74499c12a473dccbc96a64d",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/references/submission-package.md",
+      "blob_sha": "fe5d63ea0bf44903431fabf877f02abd1eba4f47",
+      "upstream_blob_sha": "c05ec86abe4426325cd8b5fdac26ef73c5b04c96",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/core/output-format.md",
+      "blob_sha": "53960c21f9fc9269687ef1731eddbd36bdf4fc65",
+      "upstream_blob_sha": "ed2d6f27626971d16bc516a9efaae990907efe40",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/core/stance.md",
+      "blob_sha": "b35c14d8119e1342b3fea05e547812cbf52d7cd1",
+      "upstream_blob_sha": "4d61effcfef8194b421756e7e21a4a2a7aa4fba5",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/core/workflow.md",
+      "blob_sha": "3bd7e38553a15570fb479ba0ff35d78947df73ab",
+      "upstream_blob_sha": "d050fab184a1be779a23e50dde6d6151188c5d15",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/fragments/journal/generic.md",
+      "blob_sha": "7e257afababe2d1ee0704cab967a321e07015ab8",
+      "upstream_blob_sha": "17caaddbd8a5940adc2dae9f8793dd6a2dc8672d",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/fragments/journal/nat-comms.md",
+      "blob_sha": "e6db734c5022c28582a9f2c06a44aa173d004416",
+      "upstream_blob_sha": "d5476250faf01c3c23ceddc124172c1ee655633d",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/fragments/journal/nature.md",
+      "blob_sha": "e11f3061fd7791bccf910ff67e2c8e483af28178",
+      "upstream_blob_sha": "b95f10806033f0a33e12fc32c8080ccd684c74f2",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/fragments/section/abstract.md",
+      "blob_sha": "f24ad9a99e569ee3c28636be1737e65d73d8cd63",
+      "upstream_blob_sha": "dc98269ee37948db1954de6ba21cf302048e2999",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/fragments/section/discussion.md",
+      "blob_sha": "f0287678f78c141a6ee56ad13a2500db01bd648a",
+      "upstream_blob_sha": "4c7a679b67f22e06a6cf616761dd4f636484a2d0",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/fragments/section/experiments.md",
+      "blob_sha": "bf424f320dcb29d6a89475e34a686395775ee0fb",
+      "upstream_blob_sha": "9fb7b46784d35f538672060e4f7397cb5ac3e907",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/fragments/section/intro.md",
+      "blob_sha": "27f73139eadd15b417ff168e91e24aa7b2bbee40",
+      "upstream_blob_sha": "51acbfe913bc7b342df73f012e4eec6a3be31660",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/fragments/section/method.md",
+      "blob_sha": "3221d8198039a6142582a17678e00dcf7a6cddc3",
+      "upstream_blob_sha": "b1b66982ad1c21c739ad9e6bcaf7725eec4f8bb8",
+      "status": "different"
+    },
+    {
+      "path": "skills/nature-writing/static/fragments/task/submission-package.md",
+      "blob_sha": "e45a606c85fa80d9c917b2bf8f7f3ecd984be784",
+      "upstream_blob_sha": "e01a4a2f973621549559717febd4f407b90e377e",
+      "status": "different"
+    },
+    {
+      "path": "skills/research-context-recommender/SKILL.md",
+      "blob_sha": "dffbff70e49160d7c6ac5ceed7bf7bbe11fda221",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/research-context-recommender/agents/openai.yaml",
+      "blob_sha": "99553d5f6c82496788e922bb60cecd4c25a6979d",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/research-context-recommender/references/records.md",
+      "blob_sha": "79cedd20e38ded0640e70e33e48b24c022ccdeba",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/research-context-recommender/scripts/record_store.py",
+      "blob_sha": "413d57cdfa1c856b624cebc504502753efe3ca78",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/research-weekly-review/SKILL.md",
+      "blob_sha": "dc3f3796415e21c2e2ed00f2aac1f93b89eb9d4b",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/research-weekly-review/agents/openai.yaml",
+      "blob_sha": "842e1f743ae1b41ee6e524af380398f28ebe9868",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/research-weekly-review/references/reports.md",
+      "blob_sha": "ae7e3409bf45d27f127ed21d82ac0000db0df3b1",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/research-weekly-review/scripts/render_report.py",
+      "blob_sha": "202c92b1b285beb545b24d9ac474de9e601deea5",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/SKILL.md",
+      "blob_sha": "ff3386f4d940b58b023df976ba361941fe91bab0",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/agents/openai.yaml",
+      "blob_sha": "e56aacc1fa36b38eb7a5556b4ece3f7f4b0c0925",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/assets/figure-provenance.csv",
+      "blob_sha": "6ec610c549f58c23c7b3a95813e5e7d3f033cee8",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/assets/run-records.json",
+      "blob_sha": "17bf83b75408ad3b20d76c12d2bafb3f36e32e08",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/assets/workflow-contract.md",
+      "blob_sha": "166bf71546ec9c205b7f56fdead8245752ecb464",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/assets/workflow-spec.json",
+      "blob_sha": "1ffb8de08824c8eef1d79e3ab109f644b19ec39e",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/references/audit-format.md",
+      "blob_sha": "b42b9c3405e8ca868a23be99a5ff8b56cdf0405d",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/references/change-and-provenance.md",
+      "blob_sha": "b38f6c5d97810e43d95240852ac7f659894125bd",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/references/hea-case.md",
+      "blob_sha": "1d8bd1d3752bfb6c80e192777746fceeb8d78cd3",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/references/reliable-execution.md",
+      "blob_sha": "1938713bbcac613ff5be000880d1e1f2ac06e4c8",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/references/stage-contracts.md",
+      "blob_sha": "a2f80803d1930edfd967828a76e48d9fde5d3e6b",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/scripts/audit_workflow.py",
+      "blob_sha": "48685e042bbcc5e78bbb9c03d7b9ec108aea6737",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/tests/test_audit_workflow.py",
+      "blob_sha": "98fd1428d798a2901aaa0c4b6cf62d92c68a38f3",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    }
+  ]
+}

@@ -6,11 +6,9 @@ description: >-
   可批量处理整篇论文/开题报告的参考文献列表，也可单条校验，支持与 Zotero 同步修正。
 ---
 
-# nature-ref-verifier — 学术参考文献多源验证技能
+<!-- Redistribution/adaptation notice: integrated local snapshot, 2026-10-15. Upstream: Yuan1z0825/nature-skills. See ../../THIRD_PARTY_NOTICES.md and PACKAGE_MANIFEST.json for origins, licenses and recorded changes. -->
 
-需要处理批量差异、反复出现的字段错误、DOI/标题冲突、作者顺序异常、页码漂移或
-报告措辞时，读取 `references/common-patterns.md`。其他任务不要预加载该文件；
-`manifest.yaml` 记录了同一按需路由，新增资源时必须同时在本文件中写明加载条件。
+# nature-ref-verifier — 学术参考文献多源验证技能
 
 ## 触发词
 

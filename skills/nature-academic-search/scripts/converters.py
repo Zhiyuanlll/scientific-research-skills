@@ -11,8 +11,7 @@ import re
 
 def ris_escape(text):
     """Strip HTML tags and normalize whitespace for safe RIS field output."""
-    # Strip real tags only; "p<0.05 ... p>0.01" must not be read as one tag.
-    text = re.sub(r"</?[A-Za-z][A-Za-z0-9]*(?:\s[^<>]*)?/?>", " ", text or "")
+    text = re.sub(r"<[^>]+>", " ", text or "")
     text = re.sub(r"\s+", " ", text)
     return text.strip()
 
@@ -126,14 +125,6 @@ def medline_to_ris(fields):
 
 # ── MEDLINE -> BibTeX ────────────────────────────────────────────
 
-def _medline_author_to_bibtex(author):
-    """MEDLINE AU is "Surname Initials"; BibTeX wants "Surname, Initials"."""
-    surname, _, initials = author.strip().rpartition(" ")
-    if surname and initials.isalpha() and initials.isupper() and len(initials) <= 4:
-        return f"{surname}, {initials}"
-    return author.strip()
-
-
 def medline_to_bib(fields):
     pmid = _get_first(fields, "PMID")
     citation_key = f"pmid{pmid}" if pmid else "unknown"
@@ -142,7 +133,7 @@ def medline_to_bib(fields):
 
     aus = fields.get("AU", [])
     if aus:
-        lines.append(f"  author  = {{ {' and '.join(_medline_author_to_bibtex(a) for a in aus)} }},")
+        lines.append(f"  author  = {{ {' and '.join(aus)} }},")
 
     ti = _get_first(fields, "TI")
     if ti:

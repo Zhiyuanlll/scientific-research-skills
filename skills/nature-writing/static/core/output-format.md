@@ -1,5 +1,9 @@
 # Output format (writing)
 
+For formal manuscripts, apply the shared [register and artifact boundary](../../../nature-shared/core/manuscript-register.md). The formats below describe the conversation response; outlines, revision notes, evidence-status maps and requests for missing inputs do not belong in submission-ready manuscript text. When editing a document, keep that supporting commentary in the conversation.
+
+Honor the requested output language; Chinese input does not by itself request English translation. For a short edit or an explicit prose-only request, return the requested prose or a brief completion note. Keep routine planning, terminology and evidence checks internal unless a material ambiguity needs the user's input; this controls how planning/ledger display defaults are applied to such requests. Use the expanded response structure below when it helps with a substantial drafting or revision task.
+
 Default output:
 
 1. `Draft:` — the requested prose.
@@ -10,18 +14,7 @@ Default output:
 5. `Why this structure:` — `2-4` short bullets on the structural choices made.
 6. `To redirect me:` — one line inviting targeted feedback, e.g. "Name the paragraph or claim that is off and I will revise only that, keeping the rest." This sets up the targeted revision loop (workflow step 9) instead of a full rewrite.
 
-For Chinese-author notes, provide polished English first, then brief Chinese notes explaining major structural choices.
-
-For a Results or full-main-text restructuring task, also include a compact
-`Main-text discipline audit:` after the prose:
-
-- result allocation: core / necessary support / qualification / SI-bound detail
-- relocated, replaced, compressed, or deleted material
-- primary statistic retained in the main text and secondary analyses routed to SI
-- before/after word count for each revised subsection
-
-Return the full allocation and claim-repetition tables only when the manuscript
-is being comprehensively restructured or the user asks for the audit trail.
+When translation into English is requested or agreed, provide polished English and, when useful, brief Chinese notes on major structural choices. Otherwise use the requested manuscript language.
 
 If essential evidence or boundary is missing, do not invent. Write a placeholder such as `[Evidence needed: comparator group accuracy on test set X]` and list it under `Assumptions or missing inputs:`.
 

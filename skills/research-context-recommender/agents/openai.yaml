@@ -1,0 +1,4 @@
+interface:
+  display_name: "科研上下文文献推荐"
+  short_description: "结合近期科研问题、周总结和自然语言反馈检索文献，持续保留来源与推荐记录"
+  default_prompt: "使用 $research-context-recommender，结合我近期科研进展和反馈推荐文献，并保存研究状态与推荐记录。"

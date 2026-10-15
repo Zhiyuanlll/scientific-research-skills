@@ -1,0 +1,4 @@
+interface:
+  display_name: "科研周回顾与计划"
+  short_description: "衔接文献、关键计算、结论与方法进展，交付简短概括及含公式和论文样式图的周报"
+  default_prompt: "使用 $research-weekly-review，根据最近科研证据完成周总结或周计划，并交付可阅读的 Markdown 报告。"

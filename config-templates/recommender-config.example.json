@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "timezone": "Asia/Shanghai",
+  "threads": {},
+  "discovery_seeds": [],
+  "preferences": {
+    "recommendation_mode": "dual-track",
+    "core_papers": {
+      "min": 5,
+      "max": 10
+    },
+    "latest_papers": {
+      "min": 0,
+      "max": 3
+    },
+    "active_questions": 3,
+    "lookback_days": 7,
+    "fallback_lookback_days": 14,
+    "initial_publication_days": 14,
+    "require_ratings": false
+  },
+  "search_skill_path": null,
+  "legacy_recommender": {
+    "read_only": true,
+    "path": null
+  }
+}

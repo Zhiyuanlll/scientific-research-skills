@@ -8,15 +8,10 @@
 
 - Stress-test a manuscript, abstract, figure set, or result storyline before submission.
 - Evaluate originality, scientific importance, interdisciplinary readership, technical soundness, and readability using Nature-style review dimensions.
-- Generate three reviewer reports in mutually blind isolated contexts, then create a separate cross-review synthesis only after every report is frozen.
+- Generate three differently focused reviewer reports and one cross-review synthesis.
 - Mark unsupported claims, technical defects, evidence-chain breaks, and barriers for non-specialist readers.
-- Separate comments into `Major Concerns` and `Minor Comments`, marking Major issues that block the central case as `Blocking Yes`.
-- Keep severe criticism direct, professional, and evidence-grounded; keep minor comments specific and actionable without inventing issues to fill a quota.
-- Avoid dash punctuation and colons throughout the prose when a sentence boundary, comma, semicolon, parentheses, or a short label on a new line is clearer; retain necessary source punctuation and hyphens in stable IDs and compound terms.
 - Use an internal 12-axis technical checklist and bind each substantive concern to a claim pointer and verifiable evidence location.
-- Cross-check terminology, units, numeric precision, Methods counts, and table support within the manuscript, separating language issues from substantive contradictions that weaken credibility.
-- After all reviewer reports are frozen, run a separate forensic consistency audit of arithmetic identities, metric bounds, aggregation levels, prose-table contradictions, duplicate rows, dispersion anomalies, provenance, and reproduction gates. Audit findings are not fed back to reviewers and frozen reports are not edited.
-- Do not coordinate or rewrite reviews to reduce duplication; treat an issue as consensus only when at least two reviewers raise it independently in the post-review synthesis.
+- Check redundancy across the three reports; treat an issue as consensus only when at least two reviewers raise it.
 - Identify which readers would care about the work and why.
 
 ## Typical Requests
@@ -36,14 +31,12 @@
 - Three peer-review style reports.
 - Cross-review synthesis: consensus problems, divergent emphases, and editor-level risks.
 - Traceable concerns with stable IDs, claim pointers, evidence pointers, and resolution tests.
-- Tiered Major/Minor comments, blocking risks, and a deduplicated minor-revision checklist.
 - List of experiments, analyses, narrative changes, or figure evidence that must be strengthened.
 - Explicit labels for judgments that cannot be made from the supplied evidence.
 
 ## Boundaries
 
 - The skill does not invent specific reviewer identities, expert personas, or editorial decisions.
-- Reviewers cannot read, cite, agree with, or respond to one another; synthesis begins only after all independent reports are locked.
 - It makes conservative simulations only from the provided material and the skill's official review rules.
 - For writing responses to real reviewer comments, use `nature-response`.
 

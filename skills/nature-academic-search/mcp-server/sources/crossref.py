@@ -88,10 +88,7 @@ class CrossRefSource:
             ) from exc
 
         if resp.status_code == 404:
-            raise DataSourceError(
-                self.SOURCE_NAME,
-                f"No citation found for DOI {doi}",
-            )
+            return f"Citation not available for DOI: {doi}"
         if resp.status_code == 406:
             raise DataSourceError(
                 self.SOURCE_NAME,

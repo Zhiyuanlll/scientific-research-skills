@@ -28,10 +28,9 @@ import sys
 import time
 import json
 import argparse
-import defusedxml.ElementTree as ET
-import requests
-from urllib.parse import urlencode, urlparse
+import xml.etree.ElementTree as ET
 from urllib.request import urlopen
+from urllib.parse import urlencode
 
 from converters import (
     convert_from_medline,
@@ -44,12 +43,6 @@ EUTILS_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 CROSSREF_BASE = "https://api.crossref.org/works"
 ARXIV_BASE = "https://export.arxiv.org/api/query"
 DELAY = 0.5
-ALLOWED_HOSTS = {"eutils.ncbi.nlm.nih.gov", "api.crossref.org", "export.arxiv.org"}
-
-
-def _is_allowed_url(url):
-    """Only allow requests to the known, hardcoded API hosts (mitigates SSRF)."""
-    return urlparse(url).hostname in ALLOWED_HOSTS
 
 
 # ── PubMed ──────────────────────────────────────────────────────
@@ -58,11 +51,8 @@ def esearch(query, max_results=5):
     params = {"db": "pubmed", "term": query, "retmax": max_results, "retmode": "xml"}
     url = f"{EUTILS_BASE}/esearch.fcgi?{urlencode(params)}"
     try:
-        if not _is_allowed_url(url):
-            print("  ESearch error: URL host not in allowlist")
-            return []
-        resp = requests.get(url, timeout=30)
-        xml_data = resp.text
+        with urlopen(url, timeout=30) as resp:
+            xml_data = resp.read().decode("utf-8")
         root = ET.fromstring(xml_data)
         id_list = root.find("IdList")
         if id_list is not None:
@@ -76,13 +66,12 @@ def esearch(query, max_results=5):
 def efetch_medline(pmid, retries=1):
     params = {"db": "pubmed", "id": pmid, "rettype": "medline", "retmode": "text"}
     url = f"{EUTILS_BASE}/efetch.fcgi?{urlencode(params)}"
-    attempts = max(1, retries)  # --retry 0 must still try once
-    for attempt in range(attempts):
+    for attempt in range(retries):
         try:
             with urlopen(url, timeout=30) as resp:
                 return resp.read().decode("utf-8")
         except Exception as e:
-            if attempt == attempts - 1:
+            if attempt == retries - 1:
                 print(f"  EFetch error for PMID {pmid}: {e}")
                 return None
             time.sleep(DELAY * (attempt + 1))
@@ -140,14 +129,13 @@ def download_crossref(doi, output_dir, fmt, retries=1):
     print(f"  Downloading DOI: {doi}")
     time.sleep(DELAY)
     url = f"{CROSSREF_BASE}/{doi}"
-    attempts = max(1, retries)  # --retry 0 must still try once
-    for attempt in range(attempts):
+    for attempt in range(retries):
         try:
             with urlopen(url, timeout=30) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
             break
         except Exception as e:
-            if attempt == attempts - 1:
+            if attempt == retries - 1:
                 return False, f"CrossRef API error for DOI {doi}: {e}"
             time.sleep(DELAY * (attempt + 1))
 
@@ -180,14 +168,13 @@ def download_arxiv(arxiv_id, output_dir, fmt, retries=1):
     time.sleep(DELAY)
     params = {"id_list": arxiv_id, "max_results": 1}
     url = f"{ARXIV_BASE}?{urlencode(params)}"
-    attempts = max(1, retries)  # --retry 0 must still try once
-    for attempt in range(attempts):
+    for attempt in range(retries):
         try:
             with urlopen(url, timeout=30) as resp:
                 xml_data = resp.read().decode("utf-8")
             break
         except Exception as e:
-            if attempt == attempts - 1:
+            if attempt == retries - 1:
                 return False, f"arXiv API error for ID {arxiv_id}: {e}"
             time.sleep(DELAY * (attempt + 1))
 

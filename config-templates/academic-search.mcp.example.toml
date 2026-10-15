@@ -1,0 +1,8 @@
+# 示例片段：手动替换路径并合并到支持此格式的客户端配置，勿覆盖整个配置文件。
+[mcp_servers.academic-search]
+command = "/absolute/path/to/venv/bin/python"
+args = ["/absolute/path/to/skills/nature-academic-search/mcp-server/academic_search_server.py"]
+
+[mcp_servers.academic-search.env]
+PUBMED_EMAIL = "your-contact-email@example.org"
+# NCBI_API_KEY 由接收者在本地配置；本模板不提供密钥。

@@ -1,19 +1,40 @@
 ---
 name: nature-literature-pipeline
-description: |
-  Complete automated literature discovery pipeline: multi-source search → six-dimension scoring → fine reading → formatted delivery → archival.
-  Combines a configurable engine with daily cron-driven application layer. Works with Feishu, Telegram, or any messaging platform.
+description: 'Complete automated literature discovery pipeline: multi-source search
+  → six-dimension scoring → fine reading → formatted delivery → archival.
+
+  Combines a configurable engine with daily cron-driven application layer. Works with
+  Feishu, Telegram, or any messaging platform.
+
+  '
 license: MIT
 metadata:
-  author: Jiahao8595
   hermes:
-    tags: [research, literature, pipeline, cron, automation, discovery]
-    related_skills: [nature-academic-search, nature-citation, arxiv, zotero]
+    tags:
+    - research
+    - literature
+    - pipeline
+    - cron
+    - automation
+    - discovery
+    related_skills:
+    - nature-academic-search
+    - nature-citation
+    - arxiv
+    - zotero
+  author: 十五 (JL Lab)
+  version: 1.0.0
 ---
+
+<!-- Redistribution/adaptation notice: integrated local snapshot, 2026-10-15. Upstream: Yuan1z0825/nature-skills. See ../../THIRD_PARTY_NOTICES.md and PACKAGE_MANIFEST.json for origins, licenses and recorded changes. -->
 
 # Nature Literature Pipeline
 
 A complete, production-tested automated literature pipeline. Not just "search for papers" — it's a structured engine that scores, classifies, reads, delivers, and archives research papers daily.
+
+## 分享版的平台适配
+
+文中的 Hermes cron、飞书和 Telegram 是平台适配示例，本分享包未配置这些运行时或渠道。使用接收者宿主实际提供的调度与交付能力；仅在用户要求时建立定时任务，向外部渠道发送消息需有相应授权。未接入渠道时可在当前聊天交付并在用户指定本地目录归档，不声称已推送至外部平台。
 
 ## What It Does
 

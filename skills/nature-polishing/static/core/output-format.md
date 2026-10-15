@@ -1,5 +1,9 @@
 # Output format
 
+For formal manuscripts, apply the shared [register and artifact boundary](../../../nature-shared/core/manuscript-register.md). The formats below describe the conversation response; outlines, revision notes, evidence-status maps and requests for missing inputs do not belong in submission-ready manuscript text. When editing a document, keep that supporting commentary in the conversation.
+
+Honor the requested output language; Chinese input does not by itself request English translation. For a short edit or an explicit prose-only request, return the requested prose or a brief completion note. Keep routine planning, terminology and evidence checks internal unless a material ambiguity needs the user's input; this controls how planning/ledger display defaults are applied to such requests. Use the expanded response structure below when it helps with a substantial drafting or revision task.
+
 Default output:
 
 1. The polished text as plain prose, not in a code block.
@@ -13,9 +17,3 @@ If the user asks for side-by-side revision, provide:
 - `Why changed`
 
 If any paragraph's structural problem could not be fixed without inventing content, say so under `Revision notes:` instead of papering over it.
-
-When the main-text discipline is triggered, add a compact
-`Main-text discipline audit:` that identifies material kept, replaced,
-compressed, relocated to SI/caption, or deleted; states which descriptive and
-primary inferential quantities remain in the main text; and reports the
-before/after word count. Do not bury the polished prose under the audit.

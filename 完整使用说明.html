@@ -1,0 +1,713 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>科研全流程 Skill 使用手册</title><style>body{margin:0;background:#f6f8fa;color:#172b3a;font:16px/1.8 system-ui,"Noto Sans CJK SC",sans-serif}nav{padding:22px;background:#123c51;display:flex;gap:14px;flex-wrap:wrap}nav a{color:#fff}main{max-width:1100px;margin:auto;padding:24px}section{background:white;margin-bottom:24px;padding:28px;border-radius:12px}h1{font-size:28px}h2{font-size:22px;margin-top:32px}table{display:block;overflow:auto;border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #d8e2e8;padding:9px;min-width:100px;vertical-align:top}th{background:#edf4f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f4f6;padding:18px;border-radius:7px}code{font-family:ui-monospace,monospace;color:#1b506b}blockquote{border-left:4px solid #51a1aa;padding:4px 16px;background:#f5fafb}a{color:#036b91}section:target{outline:2px solid #75b9c7}@media print{nav{display:none}section{padding:0;break-before:page}table{font-size:11px}body{background:white}}</style><nav><a href="#doc-0">README</a><a href="#doc-1">00_整体科研流程</a><a href="#doc-2">01_安装与首次使用</a><a href="#doc-3">02_各技能功能与示例</a><a href="#doc-4">03_研究状态与周期协同</a><a href="#doc-5">04_依赖与常见问题</a><a href="#doc-6">05_打包与验证记录</a></nav><main><section><h1>GitHub 公开发布版</h1><p>仓库：<a href="https://github.com/Zhiyuanlll/scientific-research-skills">Zhiyuanlll/scientific-research-skills</a>。下文为整合手册正文；公开发布新增的来源、署名及分项许可请参阅 <a href="THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>。根目录 Apache-2.0、已有 MIT 模块及 figures4papers 的 CC BY-NC 4.0 各按其范围适用。最新安装命令和验证记录以 README.md 与 docs/05_打包与验证记录.md 为准。</p></section><section id="doc-0"><h1>科研全流程 Skill 分享包</h1>
+<p>这套工具集包含 22 个技能，支持从理解研究背景、文献推荐与精读、知识沉淀、研究问题与证据计划，到工作流搭建、统计绘图、论文写作、投稿返修和科研回顾的完整流程。</p>
+<p>知识库将文献与研究认识沉淀为可复用的理论、方法和方向证据；周回顾与计划贯穿各研究阶段，核对真实进展、维护研究状态并衔接后续工作。每项技能可以独立按需使用，也可通过来源记录和交付物协作。</p>
+<p>建议按以下顺序阅读：</p>
+<ol>
+<li><a href="#doc-1">整体科研流程</a>：主线、周期反馈、交接产物及完整研究示例。</li>
+<li><a href="#doc-2">安装与首次使用</a>：完整或按需安装、更新、验证与调用。</li>
+<li><a href="#doc-3">技能功能与使用示例</a>：按科研流程介绍 22 项能力及操作示例。</li>
+<li><a href="#doc-4">研究状态与周期协同</a>：推荐配置、知识维护、周回顾与计划、资料交接和日程安排。</li>
+<li><a href="#doc-5">依赖与常见问题</a>：检索、下载、绘图、知识库审计、周报公式和 HTML 等依赖。</li>
+<li><a href="#doc-6">打包与验证记录</a>：文件快照、分享版适配和实际检查范围。</li>
+</ol>
+<p>也可用浏览器离线打开 <a href="%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.html">完整使用说明.html</a>。</p>
+<p>解压后，在包根目录运行：</p>
+<pre><code class="language-bash">python3 verify_package.py
+python3 install_skills.py --dry-run
+python3 install_skills.py
+</code></pre>
+<p>默认目标为 <code>~/.agents/skills/</code>，可用 <code>--target</code> 指定实际技能目录，<code>--only</code> 按需选择并带上包内依赖。不同内容的同名技能不会被覆盖。Windows 可按本机 Python 安装将 <code>python3</code> 换成 <code>py -3</code>。</p>
+<p>安装技能不等于安装外部工具、接入数据库或建立定时任务。所有技能目录应完整保留；研究数据、知识库、周报、推荐记录、访问权限和计算资源由使用者自行配置。包内不含个人聊天、密钥、机构账号、私人科研结果或 HEA 求解器。</p>
+</section><section id="doc-1"><h1>科研全流程：从文献与知识到计算证据和论文</h1>
+<p>这套 22 项技能围绕同一条研究证据链协作：理解研究现状，获得和消化文献，积累知识，提出可检验问题，组织计算或分析，形成图表与论证，并在持续回顾中修正下一步。使用者提供真实材料、代码、数据和访问权限；各技能的输出成为后续工作的有来源输入。</p>
+<h2>研究主线</h2>
+<pre><code class="language-text">研究目标、已有背景与当前问题
+               ↓
+文献推荐与检索：方向核心文献 + 最新研究进展
+               ↓
+全文获取与精读：公式、图表、方法条件与原文定位
+               ↓
+知识库：公共概念、必要理论、方向证据、限制与未知
+               ↓
+问题与证据计划：主张 → 对照/计算 → 验收条件
+               ↓
+科研工作流：阶段接口 → 小试验证 → 批量与恢复
+               ↓
+统计分析与科研绘图：源表、样本、图件及数据来源
+               ↓
+论文论证与写作：章节、引用、科学含义、语言与图注
+               ↓
+预审、数据共享、投稿与返修；按需要制作论文汇报
+</code></pre>
+<p>知识库可随阅读、方法发展和研究结果持续更新，而非只在精读后运行一次。已有成熟知识和程序时，可直接从当前需要的环节开始；不必顺序调用全部技能，也不应让目录结构决定研究论证。</p>
+<h2>贯穿各阶段的周期反馈</h2>
+<pre><code class="language-text">文献阅读、知识变化、关键计算、科学结论、方法推进
+                         ↓
+周回顾 review：核对证据、完成情况、卡点与变化
+                         ↓
+有来源的研究状态 + 周计划 plan：目标、依赖与完成判据
+                         ↓
+调整下一轮推荐、知识深化、研究执行和论文修改
+                         ↺
+</code></pre>
+<p>周回顾可发生在研究的任何阶段，不需要等待论文完成。被推荐、已阅读、理解、尝试、验证的状态分开；排队、运行中、部分完成、失败、数值完成与科学验证通过也分开。计划始终保持建议身份，不能作为完成证据。</p>
+<h2>各环节的技能与交接</h2>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>主要技能</th>
+<th>输入</th>
+<th>交接产物与核对重点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>背景与推荐</td>
+<td>research-context-recommender</td>
+<td>研究目标、逐领域背景、近期材料、反馈</td>
+<td>有日期和来源的研究状态、核心/最新清单及阅读顺序；不从聊天量推断掌握程度</td>
+</tr>
+<tr>
+<td>检索、获取与精读</td>
+<td>nature-academic-search、nature-downloader、nature-reader</td>
+<td>科学问题、论文线索与可访问来源</td>
+<td>核实书目、原文对照、公式图表及定位；明确实际读到元数据、摘要还是全文</td>
+</tr>
+<tr>
+<td>知识沉淀与深化</td>
+<td>knowledge-library-builder</td>
+<td>选定阅读稿、研究笔记、已有库和项目证据</td>
+<td>公共概念、实质性方向笔记、来源登记与未知；保护批注，保留相反证据和版本差异</td>
+</tr>
+<tr>
+<td>问题、方法与计算</td>
+<td>scientific-workflow-builder</td>
+<td>假设、证据需求、已有代码和资源</td>
+<td>阶段接口、验证矩阵、小试、任务与恢复记录；程序退出成功不等于科学验收</td>
+</tr>
+<tr>
+<td>统计与绘图</td>
+<td>nature-statistics、nature-figure</td>
+<td>已验收数据、量的定义、独立样本和图件结论</td>
+<td>源表、统计报告、绘图代码与图件；未收敛、删失及不同协议不得混作有效重复</td>
+</tr>
+<tr>
+<td>论证与起草</td>
+<td>researchwrite、nature-writing、academic-writing-fidelity</td>
+<td>事实表、图件、模型条件、主张与目标期刊</td>
+<td>论证图、章节约定、正文和图注；保留假设、失败检验及未验证范围</td>
+</tr>
+<tr>
+<td>引用与语言</td>
+<td>nature-citation、nature-ref-verifier、nature-polishing、jmps-writing-fidelity</td>
+<td>稿件、文献与确定的科学含义</td>
+<td>引用对应、核验和润色稿；不为期刊声望牺牲相关性，不升级证据强度</td>
+</tr>
+<tr>
+<td>预审与投稿修订</td>
+<td>nature-reviewer、nature-data、nature-response</td>
+<td>稿件、实际共享条件、审稿意见与真实修改</td>
+<td>预审报告、声明、投稿与返修材料；计划修改与已完成修改分开</td>
+</tr>
+<tr>
+<td>汇报与主题归档</td>
+<td>nature-paper2ppt、nature-literature-pipeline</td>
+<td>论文、听众/时长或专题监测范围</td>
+<td>汇报 PPT、讲稿、主题摘要与阅读归档；来源与实际生成状态可检查</td>
+</tr>
+<tr>
+<td>周期回顾与计划</td>
+<td>research-weekly-review</td>
+<td>各阶段截至运行时已存在的证据和上次计划</td>
+<td>短概括、完整报告、状态快照与计划；只读事实与行动建议分开</td>
+</tr>
+</tbody>
+</table>
+<p><code>nature-shared</code> 为写作、润色、阅读和汇报提供公共资料，通常无需单独调用。</p>
+<h2>相邻技能如何分工</h2>
+<p>research-context-recommender 决定针对当前研究问题和学习需要该读什么，nature-academic-search 执行检索核实；nature-literature-pipeline 适合按主题评分和归档。可以选择一个固定推荐入口，或明确专题监测与问题推荐的分工及去重范围。</p>
+<p>nature-reader 保留原文、图表及定位，knowledge-library-builder 从选定材料凝练跨论文、跨项目的概念与方向知识。知识笔记不能替代全文对照；周报记录进展与变化，也不能替代稳定知识。</p>
+<p>scientific-workflow-builder 管接口、验证、运行与证据来源，nature-statistics 检查统计设计和报告，nature-figure 管图件表达。绘图失败不自动要求重算，图形美化不改变数据验收状态。</p>
+<p>researchwrite 是 nature-proposal-writer 目录对应的调用名，适合复杂论证规划或重构；nature-writing 负责章节和投稿材料，academic-writing-fidelity 保护科学含义，nature-polishing 修改成熟文字。JMPS 专项仅用于明确的目标期刊任务。</p>
+<p>research-weekly-review 的 review 负责更新共享研究状态，plan 读取状态提出安排；推荐技能核对后保存自己的事件，知识库维护记录留在 vault。各自的写入归属和配置见 <a href="#doc-4">研究状态与周期协同</a>。</p>
+<h2>一个贯穿全过程的 HEA 研究示例</h2>
+<p>假设研究随机合金中的位错钉扎，希望判断随机场模型能否解释原子尺度响应。以下请求展示工作衔接，不代表已经得到科学结论，也不预设参数、容差、样本量或最终发现。</p>
+<ol>
+<li><strong>了解背景并推荐。</strong> “使用 $research-context-recommender，区分我熟悉的位错理论和需要补足的随机场知识，独立检索核心与最新文献，说明先读哪两篇。”</li>
+<li><strong>阅读全文。</strong> “使用 $nature-reader 精读方法论文，保留公式、图表与原文定位，提取模型假设、参数来源和验证条件。”</li>
+<li><strong>凝练知识。</strong> “使用 $knowledge-library-builder，从这些已读材料深化随机场与位错响应方向；公共理论共用，方向条件和相反证据分别解释，不只建立目录。”</li>
+<li><strong>建立验证计划。</strong> “使用 $scientific-workflow-builder，围绕模型是否足以解释响应建立证据链，区分原子输入、独立验证和参数预测。先设计，不启动批量。”</li>
+<li><strong>打通计算闭环。</strong> “在已授权的小试范围内完成输入、求解和定量比较，阈值说明依据，保留未通过项，再根据实际结果和资源组织后续计算。”</li>
+<li><strong>分析并绘图。</strong> “使用 $nature-statistics 核对种子与配对设计，用 $nature-figure 从已验收数据生成图、代码、源表和所需格式，标明样本及来源。”</li>
+<li><strong>组织论文。</strong> “使用 $researchwrite 建立事实、证据表和论证图，再用 $nature-writing 起草 Results 与 Discussion，结论限于实际证据。”</li>
+<li><strong>核验引用与表达。</strong> “广泛相关工作用 $nature-academic-search，需要 CNS 支撑时用 $nature-citation，再用 $nature-ref-verifier 核验。目标为 JMPS 时用专项规范，并检查科学原义。”</li>
+<li><strong>投稿、修订与汇报。</strong> “使用 $nature-reviewer 做预审、$nature-data 写实际共享声明，收到意见后用 $nature-response 对应真实修改，需汇报时用 $nature-paper2ppt。”</li>
+</ol>
+<p>在上述任何阶段，每周都可请求：“使用 $research-weekly-review 的 review 模式核对本周文献、计算、结论和方法变化；plan 模式读取最近状态安排下一步。不要运行计划中的研究。”下一轮推荐由这些已核实状态和用户反馈继续，而不是每周从零开始。</p>
+<h2>全过程的最小证据链</h2>
+<p>文献保留 DOI、来源日期和阅读层级；知识保留定义、适用条件、来源定位和不同证据；计算保留配置、代码版本、输入指纹及验收状态；图件保留源表、筛选、聚合和样本；论文主张对应实际图表与文献。正式知识和论文直接陈述对象与证据，运行安排、作者讨论和修改过程放在项目记录或周报中。</p>
+<p>本包不包含私人科研数据或 HEA 求解器。scientific-workflow-builder/references/hea-case.md 提供搭建方法案例，不能当作已完成结果或当前生产配置。其他研究可替换为自己的采集、分析、独立检验和扩展环节，模块数量与物理定义依实际问题确定。</p>
+</section><section id="doc-2"><h1>安装与首次使用</h1>
+<h2>选择安装位置</h2>
+<p>这是本地技能目录分享包，不是已发布的插件或云端服务，不会自动安装 MCP、数据库授权或定时任务。先解压，保留 <code>skills/</code> 内各技能的完整目录结构。</p>
+<p>按当前 <a href="https://learn.chatgpt.com/docs/build-skills">OpenAI Docs：Build skills</a> 的本地发现规则，推荐个人目录 <code>~/.agents/skills/</code>；项目级目录为 <code>&lt;项目&gt;/.agents/skills/</code>。Windows 原生个人目录对应用户主目录下的 <code>.agents/skills/</code>。独立技能需在支持本地技能的客户端使用，普通网页文件上传不等同于本地安装。</p>
+<p>打包者当前环境也使用 <code>~/.codex/skills/</code>；这是本机已观察到的布局。接收者如已有这个目录且客户端确实从中发现技能，可显式指定；不要同时装到多个发现目录造成同名重复。具体版本识别情况以客户端实际技能列表为准。</p>
+<h2>方法一：使用随包安装器</h2>
+<p>需要 Python 3.9 或更新版本。在解压后的包根目录运行。Linux/macOS/WSL 用 <code>python3</code>；Windows 原生可按实际安装换成 <code>py -3</code>。</p>
+<pre><code class="language-bash">python3 verify_package.py
+python3 install_skills.py --list
+python3 install_skills.py --dry-run
+python3 install_skills.py
+</code></pre>
+<p>默认安装 22 个目录至 <code>~/.agents/skills/</code>。安装器先核对分享包文件校验值；相同内容的已安装技能跳过，不同内容的同名技能会使本次安装停止，且在复制前报告。它不覆盖旧版、不修改 Codex 配置、不安装软件包、不创建任务。</p>
+<p>指定其他位置或按需安装：</p>
+<pre><code class="language-bash">python3 install_skills.py --target /实际项目/.agents/skills
+python3 install_skills.py --only research-context-recommender scientific-workflow-builder
+python3 install_skills.py --only nature-writing nature-polishing nature-reader
+python3 install_skills.py --only researchwrite
+</code></pre>
+<p><code>--only</code> 接受目录名或调用名，自动包含本包内必需依赖，例如推荐技能带上检索技能，写作技能带上 nature-shared。researchwrite 实际安装目录仍为 nature-proposal-writer。路径有空格时使用引号。</p>
+<p>对已验证从旧目录发现技能的环境，可使用：</p>
+<pre><code class="language-bash">python3 install_skills.py --target ~/.codex/skills --dry-run
+</code></pre>
+<p>确认位置正确后去掉 <code>--dry-run</code>。Windows 直接指定实际路径，不能照抄 Linux 的 <code>~</code> 展开规则。</p>
+<h2>方法二：手动复制</h2>
+<p>把 <code>skills/</code> 内所需目录复制到选定的技能根目录；不要只复制 SKILL.md，不要把包的整个 skills/ 目录嵌套成 <code>skills/skills/</code>。</p>
+<pre><code class="language-text">个人或项目的技能根目录/
+  nature-writing/SKILL.md
+  nature-shared/SKILL.md
+  research-context-recommender/SKILL.md
+  nature-academic-search/SKILL.md
+  scientific-workflow-builder/SKILL.md
+  ...
+</code></pre>
+<p>nature-writing、nature-polishing、nature-reader、nature-paper2ppt 与 nature-shared 保持同级。推荐技能与 nature-academic-search 也应一起安装。</p>
+<h2>验证安装和调用</h2>
+<p>按官方文档，Codex 可自动检测技能变化；未出现时重启客户端。打开新聊天，检查技能是否可见。Codex 的显式调用形式可使用 <code>$技能名</code>；CLI/IDE 可用 <code>/skills</code> 或 <code>$</code> 选择，其他界面按实际选择器使用。见 <a href="https://learn.chatgpt.com/docs/build-skills#how-chatgpt-and-codex-use-skills">OpenAI Docs 调用说明</a>。</p>
+<p>先做无需外部服务的小任务：</p>
+<blockquote>
+<p>使用 $scientific-workflow-builder，根据我提供的项目说明画出证据链和阶段接口。本次只做设计，不运行新计算。</p>
+</blockquote>
+<p>再测试文本：</p>
+<blockquote>
+<p>使用 $academic-writing-fidelity，检查我粘贴的段落，保留数量、假设、例外和证据强度。</p>
+</blockquote>
+<p>最后再配置检索、下载和定时推荐。技能能被发现、网络检索可用、机构全文访问可用是三个不同的检查结果。</p>
+<h2>更新与移除</h2>
+<p>更新前保存接收者自己的同名技能改动，将旧目录移到技能发现根目录之外的备份位置，再安装新版。不要直接用备份目录名留在技能根目录中，否则可能继续被识别。个人研究记录在 runtime_dir，更新技能时保留，勿用示例覆盖。</p>
+<p>移除时仅移走本次安装的技能目录；检查其他技能是否还依赖它。安装器不执行卸载、删除记录或修改系统设置。</p>
+</section><section id="doc-3"><h1>科研技能功能与使用示例</h1>
+<p>这 22 项技能按科研工作的主要环节排列。可根据当前问题选择入口，无需每次依次运行全部技能。知识库贯穿资料积累与方法发展，周回顾与计划按周期读取各环节的实际证据。</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>调用名</th>
+<th>功能</th>
+<th>包内依赖</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>research-context-recommender</td>
+<td><code>$research-context-recommender</code></td>
+<td>科研上下文文献推荐</td>
+<td>nature-academic-search</td>
+</tr>
+<tr>
+<td>nature-academic-search</td>
+<td><code>$nature-academic-search</code></td>
+<td>多源学术检索</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-downloader</td>
+<td><code>$nature-downloader</code></td>
+<td>全文与补充材料获取</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-reader</td>
+<td><code>$nature-reader</code></td>
+<td>全文对照阅读</td>
+<td>nature-shared</td>
+</tr>
+<tr>
+<td>knowledge-library-builder</td>
+<td><code>$knowledge-library-builder</code></td>
+<td>知识库搭建与方向深化</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>scientific-workflow-builder</td>
+<td><code>$scientific-workflow-builder</code></td>
+<td>科研工作流搭建</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-statistics</td>
+<td><code>$nature-statistics</code></td>
+<td>统计方法与报告</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-figure</td>
+<td><code>$nature-figure</code></td>
+<td>科研绘图</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-proposal-writer</td>
+<td><code>$researchwrite</code></td>
+<td>提案优先的科研写作</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-writing</td>
+<td><code>$nature-writing</code></td>
+<td>论文起草与投稿材料</td>
+<td>nature-shared</td>
+</tr>
+<tr>
+<td>academic-writing-fidelity</td>
+<td><code>$academic-writing-fidelity</code></td>
+<td>通用科学写作规范</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-citation</td>
+<td><code>$nature-citation</code></td>
+<td>文本配文献与引用导出</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-ref-verifier</td>
+<td><code>$nature-ref-verifier</code></td>
+<td>参考文献核验</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-polishing</td>
+<td><code>$nature-polishing</code></td>
+<td>论文润色与翻译</td>
+<td>nature-shared</td>
+</tr>
+<tr>
+<td>jmps-writing-fidelity</td>
+<td><code>$jmps-writing-fidelity</code></td>
+<td>JMPS 写作规范</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-reviewer</td>
+<td><code>$nature-reviewer</code></td>
+<td>投稿前模拟审稿</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-data</td>
+<td><code>$nature-data</code></td>
+<td>数据与代码可用性</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-response</td>
+<td><code>$nature-response</code></td>
+<td>审稿回复与返修</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-paper2ppt</td>
+<td><code>$nature-paper2ppt</code></td>
+<td>论文汇报 PPT</td>
+<td>nature-shared</td>
+</tr>
+<tr>
+<td>nature-literature-pipeline</td>
+<td><code>$nature-literature-pipeline</code></td>
+<td>持续文献发现与归档</td>
+<td>nature-academic-search</td>
+</tr>
+<tr>
+<td>research-weekly-review</td>
+<td><code>$research-weekly-review</code></td>
+<td>科研周回顾与计划</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>nature-shared</td>
+<td><code>$nature-shared</code></td>
+<td>共享规则与资料</td>
+<td>无必需包内依赖</td>
+</tr>
+</tbody>
+</table>
+<h2>1. 科研上下文文献推荐：research-context-recommender</h2>
+<p>结合近期研究、领域深度与自然语言反馈，独立检索方向核心文献和最新进展，保存研究状态、推荐与反馈。</p>
+<p>输入：科研材料、个人研究背景、推荐记录目录。</p>
+<p>产出：有来源的研究状态、双类清单、阅读顺序、持久记录。</p>
+<blockquote>
+<p>使用 $research-context-recommender。请根据我的研究材料推荐文献：核心不限年份、最新单列；先判断各领域的熟悉程度，并保存记录。</p>
+</blockquote>
+<h2>2. 多源学术检索：nature-academic-search</h2>
+<p>检索、核实与去重文献；支持专题检索、引用分析和严格他引等专门任务。</p>
+<p>输入：具体问题、关键词、时间与来源范围。</p>
+<p>产出：检索式、书目信息、证据与覆盖限制。</p>
+<blockquote>
+<p>使用 $nature-academic-search。请检索这个问题的代表性理论、实验与方法论文，核实 DOI，说明实际检索来源。</p>
+</blockquote>
+<h2>3. 全文与补充材料获取：nature-downloader</h2>
+<p>通过合法开放获取、出版商 API 或个人机构访问获取全文及补充材料。</p>
+<p>输入：DOI、题名或原文链接。</p>
+<p>产出：获取的文件、来源与下载状态。</p>
+<blockquote>
+<p>使用 $nature-downloader。请获取这些 DOI 的可用全文和补充材料，记录来源；机构权限使用我自己的访问环境。</p>
+</blockquote>
+<h2>4. 全文对照阅读：nature-reader</h2>
+<p>形成图表随文、保留原文定位的中英对照阅读稿，不默认退化为摘要。</p>
+<p>输入：可读取 PDF、出版商正文、DOI 或粘贴原文。</p>
+<p>产出：对照阅读稿、图表和来源定位。</p>
+<blockquote>
+<p>使用 $nature-reader。请将这篇论文做成全文中英对照阅读稿，图表放在相关段落附近并保留来源位置。</p>
+</blockquote>
+<h2>5. 知识库搭建与方向深化：knowledge-library-builder</h2>
+<p>它把用户指定的论文阅读稿、研究笔记、方法资料和可核实项目材料，凝练成总知识库、公共概念和有内容的方向专题。可用于 Obsidian Markdown vault，也可使用普通本地 Markdown 文件夹；无需为了使用本技能先安装 Obsidian。</p>
+<p>四种模式：build 建立总库，deepen 深化方向，update 归并新证据，audit 只读检查。深化应包含问题边界、理论机制、方法与可观测量、证据限制和未解决问题；建立一批空目录或导航链接不能算完成。</p>
+<p>输入是你明确选定的资料、现有库、方向和深度要求。产出是可读的知识笔记、方向入口、来源登记、链接和维护记录。它不替代 nature-reader 的全文对照翻译，也不负责执行笔记中的科研方案。</p>
+<h3>请求示例</h3>
+<blockquote>
+<p>使用 $knowledge-library-builder 的 build 模式，仅根据我指定的资料建立知识库。先登记来源，将共用理论与各研究问题分开；知识正文解释原理、证据和适用条件，保留缺失证据，不复制运行进度和聊天安排。</p>
+</blockquote>
+<blockquote>
+<p>使用 $knowledge-library-builder 的 deepen 模式，把这个方向深化到研究层级。复用已有公共概念，补足方法选择、必要推导与相反证据，保护我的批注；缺少的资料列为缺口。</p>
+</blockquote>
+<blockquote>
+<p>使用 $knowledge-library-builder 的 update 模式，归并这些新论文和已核实结果。编辑前备份并核对文件是否并发变化，不批量删除或改名来去重。</p>
+</blockquote>
+<blockquote>
+<p>使用 $knowledge-library-builder 的 audit 模式，只读审查这个库的方向内容、来源、链接与重复候选，不修改笔记。</p>
+</blockquote>
+<h3>随附审计工具</h3>
+<p>需要 Python 3.10+。核心脚本使用标准库；PyYAML 是可选增强，未安装时会明确报告属性解析限制。</p>
+<pre><code class="language-bash">python3 &lt;技能目录&gt;/scripts/audit_vault.py --vault &lt;实际知识库目录&gt; --report &lt;知识库之外的报告路径.json&gt;
+python3 &lt;技能目录&gt;/scripts/smoke_test.py
+</code></pre>
+<p>报告必须放在 vault 外。它检查本地 wiki/Markdown 链接、别名、标题或块引用、Canvas、基础属性及完全重复内容候选；不联网验证外链，不判断科学正确性或语义重复，也不自动删除。备份位于库外或明确排除出索引，避免被当成重复知识。</p>
+<h2>6. 科研工作流搭建：scientific-workflow-builder</h2>
+<p>从研究问题和现有代码构建阶段接口、定量验证、批量运行、恢复与图件溯源。</p>
+<p>输入：研究问题、数据、代码及资源约束。</p>
+<p>产出：可验证的流程、接口、最小闭环、运行与来源记录。</p>
+<blockquote>
+<p>使用 $scientific-workflow-builder。请根据研究问题和代码建立工作流，先打通小算例，明确验证关口，再设计批量与恢复。</p>
+</blockquote>
+<h2>7. 统计方法与报告：nature-statistics</h2>
+<p>审查独立样本、统计方法、效应量、不确定性、p 值及图注统计报告。</p>
+<p>输入：实验设计、原始/汇总数据、统计方法及结果。</p>
+<p>产出：统计审查与可据实使用的报告文字。</p>
+<blockquote>
+<p>使用 $nature-statistics。请检查我的重复单位、误差条和统计方法，并区分已完成分析与待补充检查。</p>
+</blockquote>
+<h2>8. 科研绘图：nature-figure</h2>
+<p>用 Python 或 R 生成、检查和导出论文图；明确请求时支持 AI 示意图草案。</p>
+<p>输入：数据表、物理量定义、图件结论和导出要求。</p>
+<p>产出：绘图源代码、图文件、图件检查结果。</p>
+<blockquote>
+<p>使用 $nature-figure。请用 Python 根据已验收数据绘制多面板论文图，保留单位、样本数和来源，导出 PDF 与 TIFF。</p>
+</blockquote>
+<h2>9. 提案优先的科研写作：researchwrite</h2>
+<p>先建立事实、证据表、论证图和章节约定，再写提案、综述或重构复杂稿件。</p>
+<p>输入：研究材料、已有草稿、范围及证据。</p>
+<p>产出：论证与证据文件、分节草稿和质量记录。</p>
+<blockquote>
+<p>使用 $researchwrite。请先建立证据表和论证结构，再起草这个综述；缺少证据的主张单独列出。</p>
+</blockquote>
+<p>调用名是 researchwrite，不是目录名。外部 professor 等技能未包含，分享版已写明可用工具与明确单代理审查的适配方式。</p>
+<h2>10. 论文起草与投稿材料：nature-writing</h2>
+<p>起草和重建论文各章节，以及首次投稿的配套材料。</p>
+<p>输入：有来源的结果、图件、研究主张与目标期刊。</p>
+<p>产出：论文段落/章节与投稿材料。</p>
+<blockquote>
+<p>使用 $nature-writing。请根据已完成结果和图件来源表起草 Results，保留模型假设和未验证范围。</p>
+</blockquote>
+<h2>11. 通用科学写作规范：academic-writing-fidelity</h2>
+<p>跨期刊保护科学含义、数量、假设和证据强度，保持术语和图注一致。</p>
+<p>输入：原文、事实依据及写作目标。</p>
+<p>产出：忠于科学含义的正文、图注或语言审查。</p>
+<blockquote>
+<p>使用 $academic-writing-fidelity。请审核正文和图注，保留原义、数量、模型条件和证据强度，并清理讨论痕迹。</p>
+</blockquote>
+<h2>12. 文本配文献与引用导出：nature-citation</h2>
+<p>分段寻找论述支撑并导出引用；当前默认范围为 Nature/Science/Cell 及所接受子刊。</p>
+<p>输入：待引用文字、时间范围与目标格式。</p>
+<p>产出：论述—来源对应、支持程度及引用文件。</p>
+<blockquote>
+<p>使用 $nature-citation。请为这些论述找 CNS 及子刊的支撑文献，区分直接支持与背景相关，导出 RIS。</p>
+</blockquote>
+<p>当前规则为 CNS/Nature 等指定刊族，不能当作全学科无限刊检索。完整相关工作优先使用 nature-academic-search，不为匹配高影响期刊牺牲直接相关性。</p>
+<h2>13. 参考文献核验：nature-ref-verifier</h2>
+<p>核对作者、题名、年份、卷期、页码和 DOI，按需要连接个人 Zotero。</p>
+<p>输入：参考文献列表、BibTeX 或数据库记录。</p>
+<p>产出：字段差异、核实结果和待确认项。</p>
+<blockquote>
+<p>使用 $nature-ref-verifier。请逐条核验这份参考文献，保留未核实项，不凭题名猜测 DOI。</p>
+</blockquote>
+<h2>14. 论文润色与翻译：nature-polishing</h2>
+<p>以 Nature 倾向的行文组织润色和翻译，按需处理 LaTeX 布局。</p>
+<p>输入：已有文字、目标期刊及受保护含义。</p>
+<p>产出：润色稿、翻译或布局修订。</p>
+<blockquote>
+<p>使用 $nature-polishing。请润色这段 Discussion，保持因果与推断强度，统一正文和图注术语。</p>
+</blockquote>
+<h2>15. JMPS 写作规范：jmps-writing-fidelity</h2>
+<p>面向 JMPS/力学论文的专项表达，保留力学定义和证据边界。</p>
+<p>输入：JMPS 目标稿或明确指定的力学写作任务。</p>
+<p>产出：符合专项规范的稿件和语言审查。</p>
+<blockquote>
+<p>使用 $jmps-writing-fidelity。请按 JMPS 风格修改这段力学论述，保留边界条件、近似假设和数量。</p>
+</blockquote>
+<h2>16. 投稿前模拟审稿：nature-reviewer</h2>
+<p>从审稿人视角给出三份评估及综合问题清单，依据实际稿件而非假想成果。</p>
+<p>输入：完整或部分稿件、图件与补充材料。</p>
+<p>产出：审稿报告、证据缺口与修改优先级。</p>
+<blockquote>
+<p>使用 $nature-reviewer。请做投稿前模拟审稿，检查创新性、技术论证和证据范围，并定位问题。</p>
+</blockquote>
+<p>三份模拟评估不等于三位真实独立外部审稿人，也不保证录用；以实际阅读范围和来源为限。</p>
+<h2>17. 数据与代码可用性：nature-data</h2>
+<p>准备数据可用性声明、仓库计划、数据引用和 FAIR 元数据检查。</p>
+<p>输入：真实数据/代码位置、共享条件和限制。</p>
+<p>产出：可据实使用的声明与共享计划。</p>
+<blockquote>
+<p>使用 $nature-data。请根据这些实际共享条件写数据可用性声明，尚无 DOI 的数据不要编造编号。</p>
+</blockquote>
+<h2>18. 审稿回复与返修：nature-response</h2>
+<p>将审稿意见对应到实际行动和证据，形成逐点回复、返修信及修订材料。</p>
+<p>输入：编辑/审稿意见、实际修改与新增结果。</p>
+<p>产出：意见跟踪、逐点回复和修订材料。</p>
+<blockquote>
+<p>使用 $nature-response。请逐点整理审稿意见，区分已修改和待完成事项，据实际证据起草回复。</p>
+</blockquote>
+<h2>19. 论文汇报 PPT：nature-paper2ppt</h2>
+<p>从论文形成中文汇报故事、图件、讲稿和真实 PPTX，并检查版式。</p>
+<p>输入：论文、图表、汇报时长与听众。</p>
+<p>产出：PPTX、演讲备注和图件检查。</p>
+<blockquote>
+<p>使用 $nature-paper2ppt。请把这篇论文做成中文组会 PPT，保留完整关键图并说明证据与限制。</p>
+</blockquote>
+<h2>20. 持续文献发现与归档：nature-literature-pipeline</h2>
+<p>按关键词或专题进行候选筛选、评分、精读、摘要交付和归档；调度与渠道另配置。</p>
+<p>输入：研究专题、关键词、评分与归档偏好。</p>
+<p>产出：文献摘要、评分依据、阅读笔记和归档。</p>
+<blockquote>
+<p>使用 $nature-literature-pipeline。请按这个专题筛选候选文献并归档笔记；本次只在当前聊天交付，不创建定时任务。</p>
+</blockquote>
+<h2>21. 科研周回顾与计划：research-weekly-review</h2>
+<p>一个技能包含 review 和 plan 两种模式。review 依据实际证据回顾本周，plan 根据最近可核实状态安排本周或下周；写计划不等于运行计算。它不会自行创建日程、重新检索一批文献或给其他聊天发送消息。</p>
+<p>每次围绕四条线整理：文献与知识补足、关键计算、科学结论、方法推进。计算记录目的、版本、输入条件、关键数值/单位、验收与状态；保留未通过项、相反证据、删失与尚未验证范围。排队、运行中、部分完成、失败、数值完成但未验证分别表达。</p>
+<h3>请求示例</h3>
+<blockquote>
+<p>使用 $research-weekly-review 的 review 模式，runtime_dir 为我指定的运行目录。按配置时区回顾本周，核对上次计划，衔接文献、关键计算、结论和方法变化。先给简短概括，再保存完整 Markdown、证据附件和研究状态；本次不执行科研任务。</p>
+</blockquote>
+<blockquote>
+<p>使用 $research-weekly-review 的 plan 模式，根据最近成功交付的周回顾、研究状态和最新用户要求安排下周。默认最多 3 项核心目标和 2 项有余力再做的事项，写清完成判据和依赖，不虚构工时或截止日期，不更新共享研究状态。</p>
+</blockquote>
+<h3>输出与运行目录</h3>
+<p>典型位置为 <code>&lt;runtime_dir&gt;/reports/&lt;当地ISO周&gt;/review/</code> 或 <code>plan/</code>，包含原生公式源报告 <code>.source.md</code>、嵌入可视公式的 <code>.md</code>、具备工具时生成的自包含 <code>.html</code>、evidence.json 与必要图件；review 另保留状态快照。首次初始化不预填成果。</p>
+<p>运行目录中的 config.json 由接收者记录自己的时区、来源/交付上下文、文献推荐记录位置、项目入口、样式与工具路径。见 config-templates/weekly-review-config.example.json；这是供助手读取的起始配置示例，不是渲染脚本的命令行参数 schema。模板为空不代表已接入任何聊天或定时任务。</p>
+<p>只有 review 更新共享 current_state.json，并保留历史；plan 和文献任务只读。周一计划读取截至运行时已存在的材料，不等待同时运行的新推荐。周一应引用上一周已存在的周总结，不能只凭相同周目录猜测对应关系。</p>
+<h3>公式与图件依赖</h3>
+<p>源报告使用正常 LaTeX 数学定界符，不将最终公式留在代码围栏。render_report.py 将公式排为本地图片，保留原源文件和公式 PDF/PNG。运行示例：</p>
+<pre><code class="language-bash">python3 &lt;技能目录&gt;/scripts/render_report.py --source &lt;报告.source.md&gt; --output &lt;报告.md&gt; --font &quot;Times New Roman&quot;
+</code></pre>
+<p>包含公式时需本地 XeLaTeX、相应 TeX 包、pdftoppm 和实际可用的指定字体。自包含 HTML 额外需要本地 Node 和 marked ESM 模块路径：</p>
+<pre><code class="language-bash">python3 &lt;技能目录&gt;/scripts/render_report.py --source &lt;报告.source.md&gt; --output &lt;报告.md&gt; --html &lt;报告.html&gt; --font &quot;实际选定字体&quot; --node &lt;node可执行路径&gt; --marked-module &lt;marked的本地ESM模块路径&gt;
+</code></pre>
+<p>本包不安装或附带 TeX、字体、marked 或 Node。无公式的文字版可单独交付；渲染缺工具或缺字体时保留源文件，明确哪些输出未完成。自定义宏先依据原稿展开或给出已有定义，不能为编译成功删改数学含义。生成文件还需要实际检查，不能把文件存在当视觉验收。</p>
+<p>已有关键图优先复用已核实、可追溯图件。确需重绘且数据完整时使用本包 nature-figure，按项目样式与对应样图绘制；没有新关键结果时可以不加新图，不凑图、不造数。报告图片嵌入 <code>.md</code>，保留独立可读图注和源数据/脚本。含绝对路径的 Markdown 图片依赖本地文件位置，换电脑分享单份周报时应连同 assets 一起迁移并检查链接，或使用成功生成的自包含 HTML；不能认为搬动一个 <code>.md</code> 就足够。</p>
+<h2>22. 共享规则与资料：nature-shared</h2>
+<p>为写作、润色、阅读和汇报技能提供术语、证据、行文与期刊规则。</p>
+<p>输入：由依赖它的技能按需读取。</p>
+<p>产出：共享规范，通常不单独生成交付物。</p>
+<p>通常无需单独调用。由依赖它的技能按需加载。</p>
+</section><section id="doc-4"><h1>研究状态、文献推荐与周期协同</h1>
+<h2>文献推荐的执行规则</h2>
+<p>research-context-recommender 根据当前问题、领域背景和已有反馈执行以下流程：</p>
+<ul>
+<li>每个领域分别判断 entry、orienting、problem_driven、results 或 unknown，不把一个领域的熟悉程度套到其他领域。</li>
+<li>每次独立执行两条检索：不限年份的方向核心文献，以及有明确时间窗口的最新研究进展。近期新文足够时也要做核心检索。</li>
+<li>默认所有方向合计核心 5–10 篇、最新 0–3 篇；数量是合格论文充分时的目标，不能凑数。两类跨类去重，一篇只展示计数一次。</li>
+<li>保留用户自然语言反馈、研究状态、逐领域深度、阅读用途/前置知识/阅读顺序，以及两条检索各自的覆盖。未反馈不表示不感兴趣，已推送不表示已掌握。</li>
+<li>记录脚本负责持久化，不会安排时间。时间和交付位置由接收者自己的调度任务决定。</li>
+</ul>
+<h2>首次配置</h2>
+<p>先安装 nature-academic-search 并确认检索实际可用，再安装推荐技能。建立自己的 runtime_dir，例如 <code>&lt;项目&gt;/文献推荐记录/</code>，复制 <code>config-templates/recommender-config.example.json</code> 为该目录中的 <code>config.json</code>，填写实际路径和自己的资料来源。</p>
+<p>模板的 threads 与 discovery_seeds 为空，search_skill_path 为 null；不是任何人的实际配置。可以先提供研究笔记或项目说明，缺少聊天来源时明确覆盖不足。自动跨聊天发现依赖宿主的 list_threads/read_thread 等能力；外部客户端没有这些工具时不会因此获得权限或历史，请改用可读取的个人材料。</p>
+<p>初始化空记录（<code>&lt;技能目录&gt;</code> 与 <code>&lt;记录目录&gt;</code> 替换成真实绝对路径）：</p>
+<pre><code class="language-bash">python3 &lt;技能目录&gt;/scripts/record_store.py --store &lt;记录目录&gt;/records.json init
+python3 &lt;技能目录&gt;/scripts/record_store.py --store &lt;记录目录&gt;/records.json context
+</code></pre>
+<p><code>init</code> 不覆盖已有记录。不要向其中预填未经核实的研究结论。格式和可选 domain_background 见技能 references/records.md。脚本使用 fcntl，当前按 Linux/POSIX 环境设计；原生 Windows 不可直接运行，Windows 用户可在配置好对应 Codex/Python 的 WSL 环境使用。macOS 的 POSIX 路径需在自己的环境验证；不承诺跨设备/网络目录同步。</p>
+<p>第一次可这样请求：</p>
+<blockquote>
+<p>使用 $research-context-recommender，runtime_dir 为我指定的记录目录。读取我提供的研究资料，先说明各领域阶段判断及其来源；独立检索不限年份的核心文献和近 14 天最新进展。默认核心 5–10 篇、最新 0–3 篇，不凑数，说明先读哪两篇并保存记录。本次不创建定时任务。</p>
+</blockquote>
+<h2>如何表达反馈</h2>
+<ul>
+<li>“这篇的模型有用，下次优先找参数怎么测定。”</li>
+<li>“我熟悉位错理论，但刚进入机器学习势函数，需要先补概念与综述。”</li>
+<li>“这周先解决边界条件，尺寸效应暂缓。”</li>
+<li>“这篇已经精读；那篇只是收到，还没读。”</li>
+</ul>
+<p>反馈保留原话、来源与日期；临时条件按原日期解释。核心/最新的范围和 domain_background 等配置字段不是打分器，不需要逐篇星级评分。</p>
+<h2>如何设置自己的定时任务</h2>
+<p>先手动成功运行一次，再向有调度能力的宿主提出明确请求：</p>
+<blockquote>
+<p>请创建每周一北京时间 09:00 的文献推荐任务，调用 $research-context-recommender。使用我的实际 runtime_dir 和我授权读取的研究资料，在指定的推荐聊天交付。每次独立检索方向核心和最新进展，记录实际覆盖与反馈，不重复创建已有任务。</p>
+</blockquote>
+<p>这是供接收者提出的请求模板，本分享包不会执行它。指定真实时区、周期、资料来源、推荐接收位置和通知偏好。可以选每周简报，或仅在有合格新推荐/异常时通知；按个人偏好配置。没有调度能力的环境按需手动调用，不宣称已经自动运行。</p>
+<p>周总结和周计划聊天是可选上下文，不是必须复制的三个固定聊天。没有周总结时用实际研究笔记和已有状态；可以从一次研究资料输入开始，不能读取朋友原账号不可访问的聊天。</p>
+<h2>与持续文献 pipeline 的区别</h2>
+<p>上下文推荐以当前科研问题、学习深度和反馈为主；nature-literature-pipeline 适合关键词驱动的候选评分、主题摘要和归档。可选一个固定入口，也可明确分工为专题监测与每周问题推荐，但应共用去重记录或说明记录覆盖，避免重复推送。飞书/Telegram 等外部渠道不随包配置。</p>
+<h2>资料交接与状态归属</h2>
+<pre><code class="language-text">research-context-recommender：面向当前问题推荐与安排阅读
+                    ↓
+nature-reader：保留原文、图表与定位的全文阅读
+                    ↓
+knowledge-library-builder：持续凝练可复用知识、理论与证据
+                    ↓
+scientific-workflow-builder：设计、验证和追溯实际计算
+                    ↓
+统计/绘图/论文：表达已有证据、形成稿件
+                    ↓
+research-weekly-review：核对进展、方法变化、卡点与下步计划
+                    ↘ 新研究状态和反馈，进入下一轮推荐
+</code></pre>
+<p>知识库跨越周期，记录稳定概念、方法、证据与问题；周报记录一段时间的进展、变化和待办。不要把每周进度机械复制进公共概念，也不要把一段知识笔记当作新的完成证据。</p>
+<p>各自保存自己的状态：知识库维护信息留在 vault；推荐事件留在推荐 runtime_dir；周回顾的共享 current_state.json 由 review 单写。指定来源后按需读取，不扫描整台机器，也不互相覆盖状态。</p>
+<h2>安排周期任务</h2>
+<p>先手动完成一次，再由接收者明确请求宿主创建日程，例如“周日做 review，周一做 plan，文献推荐读取最近已核实状态”。说明真实时区、资料范围、接收位置和通知偏好。知识库维护若要定时，也需单独提出；安装技能本身不创建任何任务。</p>
+<p>详细的知识库模式、审计命令、周回顾输出和公式渲染示例见 <a href="#doc-3">技能功能与使用示例</a>。</p>
+</section><section id="doc-5"><h1>依赖、平台与常见问题</h1>
+<h2>按需要配置，不必先装所有软件</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>所需环境</th>
+<th>本包实际提供什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文字起草/润色/审查</td>
+<td>能读取技能和研究材料的助手</td>
+<td>指令、规则、参考资料、模板</td>
+</tr>
+<tr>
+<td>知识库结构审计</td>
+<td>Python 3.10+ 标准库；PyYAML 可选</td>
+<td>只读审计与 smoke_test；不需要 Obsidian，报告必须在 vault 外</td>
+</tr>
+<tr>
+<td>周报可视公式与 HTML</td>
+<td>公式需要 XeLaTeX、pdftoppm、相应 TeX 包和字体；HTML 另需 Node/marked</td>
+<td>渲染脚本与约定；不打包这些系统工具，不保证接收者已安装</td>
+</tr>
+<tr>
+<td>安装与包校验</td>
+<td>Python 3.9+ 标准库</td>
+<td>install_skills.py、verify_package.py，不会 pip 安装</td>
+</tr>
+<tr>
+<td>工作流记录审计</td>
+<td>Python 3.9+ 标准库</td>
+<td>只读审计脚本，适合其 JSON 格式；不替代科学检验</td>
+</tr>
+<tr>
+<td>多源学术 MCP</td>
+<td>接收者自己的 Python 环境、MCP 宿主、网络</td>
+<td>nature-academic-search/mcp-server 源码及 requirements.txt，不自动注册</td>
+</tr>
+<tr>
+<td>无 MCP 的检索</td>
+<td>可联网 Python/浏览器及真实可用来源</td>
+<td>检索技能含 OpenAlex 等降级脚本；不能把单来源说成多源成功</td>
+</tr>
+<tr>
+<td>PDF/补充材料</td>
+<td>Node.js、网络；按功能需要 Python PDF 包和浏览器控制</td>
+<td>下载编排代码、requirements.txt 和配置工具</td>
+</tr>
+<tr>
+<td>机构/CNKI/出版商全文</td>
+<td>本人机构权限、API entitlement 或有效浏览器会话</td>
+<td>访问路线和配置模板；不包含账号或访问授权</td>
+</tr>
+<tr>
+<td>科研绘图</td>
+<td>用户选择 Python 或 R；对应绘图库</td>
+<td>源代码模板、图件规则与审计工具</td>
+</tr>
+<tr>
+<td>全文阅读、PPTX、DOCX</td>
+<td>PDF 提取/渲染或文档生成工具</td>
+<td>工作流程与部分工具；未打包 OpenAI 内置文档/演示插件</td>
+</tr>
+<tr>
+<td>上下文推荐持久化</td>
+<td>Python、Linux/POSIX；检索与可读上下文</td>
+<td>新版 record_store.py 与格式说明；原生 Windows fcntl 不兼容</td>
+</tr>
+<tr>
+<td>自动推送/归档</td>
+<td>本人宿主调度、指定目录；外部渠道还需本人连接</td>
+<td>执行方法，不含任何现成定时任务</td>
+</tr>
+</tbody>
+</table>
+<p>建议 Python 3.10+ 用于整套扩展脚本，最小安装器/工作流审计可用 3.9+；特定第三方包的版本以相应 requirements 为准。Node 脚本使用现代内置 fetch 等能力，建议 Node 20+，这属于本包的运行建议，未在所有系统做兼容认证。</p>
+<h2>多源检索 MCP：接收者自行接入</h2>
+<p>在独立环境中安装包内提供的需求（按实际技能目录替换路径）：</p>
+<pre><code class="language-bash">python3 -m venv .venv-literature
+</code></pre>
+<p>Linux/macOS 激活 <code>.venv-literature/bin/activate</code>，原生 Windows 使用对应 Scripts/Activate.ps1；也可始终调用虚拟环境的 Python 绝对路径。</p>
+<pre><code class="language-bash">python -m pip install -r &lt;技能根目录&gt;/nature-academic-search/mcp-server/requirements.txt
+</code></pre>
+<p>然后按客户端实际 MCP 配置方式添加本地 stdio 服务。示例 <code>config-templates/academic-search.mcp.example.toml</code> 只给出配置片段，不是完整 Codex 配置，不要覆盖自己的 config.toml。填入虚拟环境 Python 和服务器脚本的绝对路径，PUBMED_EMAIL 用接收者自己的联系邮箱。</p>
+<p>服务器支持 search_papers、get_paper_by_id、get_citation、lookup_mesh 等；默认 CrossRef/PubMed/arXiv，Scopus/ScienceDirect 按需启用，需本人的 pybliometrics/API 配置。密钥和机构授权均由接收者自行配置，包内没有。宿主重连后做实际小查询，再依据成功/失败来源报告覆盖。本次打包未联网运行每个数据库接口，不能承诺服务状态、配额或机构全文可用。</p>
+<p>技能还描述 paper-search、Zotero 等可选集成，它们不是已随包安装的连接器。没有工具时遵照真实可用路径降级，保留失败范围。</p>
+<h2>下载、绘图与文件输出</h2>
+<p>全文获取先用 OA；出版社 API 需要个人配置及实际全文权限。<code>nature-downloader/data/schools.yaml</code> 为空机构模板；用接收者自己的图书馆资源入口配置。相关 Python 依赖在其 requirements.txt。机构浏览器路线引用的 web-access/CDP 运行时没有包含在本包，缺失时需另接可用浏览器能力，不能声称机构下载已就绪。</p>
+<p>Python 绘图常用 numpy、matplotlib，按实际脚本补充 pandas、scipy、seaborn 等；R 使用自身绘图包。只安装自己选择路线需要的依赖。示例资产可用作模板，不得把其数据当作自己的结果。AI 示意图路线需要个人 OpenRouter 配置及明确的生成请求，生成稿不是实验/模拟证据。</p>
+<p>阅读/PPT 输出依赖可用的提取、渲染和生成工具。包内不含原论文 PDF、Office 或内置演示/文档插件。缺少 PDF 渲染、PPTX 生成或字体时说明实际限制；不能以一份文字大纲宣称真实 PPTX 已交付。</p>
+<h2>常见问题</h2>
+<ul>
+<li><strong>技能找不到：</strong> 检查根目录是否正确、是否多套一层 skills、是否存在同名重复；查看 SKILL.md 是否完整，再重启客户端。不要把浏览器上传 ZIP 当作本地安装。</li>
+<li><strong>researchwrite 没出现：</strong> 调用名是 researchwrite，目录是 nature-proposal-writer。安装器接受两者。</li>
+<li><strong>只装写作后缺共享文件：</strong> nature-shared 与写作/润色/阅读/汇报保持同级；用安装器会带上依赖。</li>
+<li><strong>检索工具名与文档不同：</strong> 以运行时实际工具为准；仅安装技能不会注册 MCP。不虚构 search_papers 已调用。</li>
+<li><strong>文献覆盖过窄：</strong> nature-citation 默认 CNS 限刊；广泛专题或相关工作用 nature-academic-search。</li>
+<li><strong>Windows 推荐脚本报 fcntl：</strong> 当前记录助手为 Linux/POSIX，改在配置好的 WSL 环境运行。其他跨平台脚本不代表它也跨平台。</li>
+<li><strong>定时推荐没有执行：</strong> 检查任务是否真正创建、宿主运行条件、资料权限和检索服务；本包不带任务，也不会导入打包者聊天。</li>
+<li><strong>安装器报告同名冲突：</strong> 它不会覆盖；将旧版备份到发现目录之外，比较改动再安装。研究记录放 runtime_dir 不动。</li>
+<li><strong>包校验失败：</strong> 文件可能不完整或已编辑；保留自己的改动，重新解压原 ZIP 校验，不用改写清单掩盖差异。</li>
+</ul>
+<p>保留各目录已有来源、作者和许可证声明；不同资源的权利边界以原声明为准，本包没有给所有原材料重新指定统一许可证。</p>
+<p>知识库与周回顾的模式、工具缺失处理及周报迁移说明见 <a href="#doc-3">技能功能</a>，状态写入规则见 <a href="#doc-4">周期协同</a>。知识库结构审计可跨平台使用 Python 3.10+；这不改变推荐记录助手的原生 Windows fcntl 限制。</p>
+</section><section id="doc-6"><h1>打包与验证记录</h1>
+<p>本包包含 22 个完整技能目录。精确来源散列、分享版适配、生成时间和文件清单见 PACKAGE_MANIFEST.json。此技术记录用于追溯文件和检查，不规定技能的使用顺序。</p>
+<h2>文件与适配</h2>
+<p>技能内容与已验证的 22 项分享快照逐字节一致；本次只按科研流程重组介绍、配置协同说明和目录排序，没有修改技能实现。原有本地技能、研究记录和此前分享包保留。</p>
+<p>分享快照保留原有六个文件的兼容处理：四项 author/version 元数据移入 metadata，阅读评测的作者本机路径改为通用示例，提案与文献 pipeline 加入真实可用工具和平台适配说明。具体路径和调整理由见 share_copy_modifications。</p>
+<p>本包不含个人 vault、周报、current_state.json、真实聊天 ID、任务配置、账号密钥、字体、生产图件或 HEA 求解器。模板只提供配置起点，不代表资料、外部服务或任务已接入。</p>
+<h2>验证范围</h2>
+<ul>
+<li>该技能快照已有 22/22 格式校验、知识库工具 4 项测试、工作流审计 24 项测试及完整安装/冲突保护检查。本次核对了所有技能字节未变，并重新检查清单、安装计划与文档。</li>
+<li>周报渲染快照曾用本机工具实际生成 2 个可视公式及其 PDF/PNG、Markdown 和自包含 HTML，嵌入 1 张本地测试图，核对源文保留和拒绝同路径覆盖；测试图未放入分享技能。</li>
+<li>本次重新校验本地 Markdown 链接、离线 HTML 导航、22 项目录、技能顺序与分项介绍、逐文件散列和 ZIP 内容。</li>
+<li>保留既有绘图示例三处 <code>\lambda</code> 字符串 SyntaxWarning 的记录：不是语法错误，未为说明重组改动其绘图逻辑。</li>
+</ul>
+<p>编译与文件检查不证明科学推导成立、全部任务完成或接口长期可用。没有执行接收者的真实知识库维护、周报、科研求解、数据库检索、机构登录或任务创建。</p>
+<p>实际使用前，按自己的环境核对 Python、检索与下载工具、图形库、TeX、字体和 HTML 渲染依赖。安装后先做小范围手动任务，再按需求建立周期安排；原始记录、知识批注和运行产物分别保存，不用示例覆盖。</p>
+</section></main></html>
