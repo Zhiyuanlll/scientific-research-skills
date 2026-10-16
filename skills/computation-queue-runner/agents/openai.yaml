@@ -1,0 +1,7 @@
+interface:
+  display_name: "科研计算独立队列"
+  short_description: "将正式计算交给独立服务或批调度器，核实资源、日志、运行状态和检查点恢复"
+  default_prompt: "请使用 $computation-queue-runner，无论计算长短，请检查并将已授权的正式计算提交到关闭 Codex 后仍能运行的独立队列，先核对资源和已有任务，再验证托管状态。"
+
+policy:
+  allow_implicit_invocation: true

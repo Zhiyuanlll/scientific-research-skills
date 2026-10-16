@@ -21,6 +21,54 @@
       "status": "not_at_review_path"
     },
     {
+      "path": "skills/computation-queue-runner/SKILL.md",
+      "blob_sha": "a36c531161a334ed84555ff32dd8b037e3d74022",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/computation-queue-runner/agents/openai.yaml",
+      "blob_sha": "a68a0b9c86f924bbb0e91c4eccbf03eb646f9e6e",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/computation-queue-runner/references/local-queue.md",
+      "blob_sha": "3ed0880ff740ddf6e33c4a4f8f39959eea941286",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/computation-queue-runner/references/project-policy.md",
+      "blob_sha": "6f031187e546c93873c0c8aac62c5ee2561a1134",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/computation-queue-runner/references/recovery-and-evidence.md",
+      "blob_sha": "f34b6b4c96c2655b39045e2b4399f0f5c671956c",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/computation-queue-runner/references/scheduler-adapters.md",
+      "blob_sha": "5693b55ada1591606138e967328247452133deb6",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/computation-queue-runner/scripts/durable_queue.py",
+      "blob_sha": "22040f087aa4c772225d59b20ab6406bf284939b",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
+      "path": "skills/computation-queue-runner/tests/test_durable_queue.py",
+      "blob_sha": "2c773889c850625686b626eec5005ef33000de52",
+      "upstream_blob_sha": null,
+      "status": "not_at_review_path"
+    },
+    {
       "path": "skills/jmps-writing-fidelity/SKILL.md",
       "blob_sha": "4197654104d3f7446c257507105be056c74cb7cd",
       "upstream_blob_sha": null,
@@ -1228,7 +1276,7 @@
     },
     {
       "path": "skills/scientific-workflow-builder/SKILL.md",
-      "blob_sha": "ff3386f4d940b58b023df976ba361941fe91bab0",
+      "blob_sha": "90e8d6eee21d2747b4e9d64a75e428ef1052d257",
       "upstream_blob_sha": null,
       "status": "not_at_review_path"
     },

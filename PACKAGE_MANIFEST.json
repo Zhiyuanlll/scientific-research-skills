@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "edition": "2026-10-15-public",
-  "created_at": "2026-10-15T13:08:34+08:00",
+  "edition": "2026-10-16-independent-computation",
+  "created_at": "2026-10-16T10:38:04+08:00",
   "skills": [
     {
       "directory": "research-context-recommender",
@@ -65,6 +65,16 @@
       "inputs": "研究问题、数据、代码及资源约束",
       "outputs": "可验证的流程、接口、最小闭环、运行与来源记录",
       "prompt": "请根据研究问题和代码建立工作流，先打通小算例，明确验证关口，再设计批量与恢复。",
+      "requires": []
+    },
+    {
+      "directory": "computation-queue-runner",
+      "name": "computation-queue-runner",
+      "title": "正式计算独立队列",
+      "purpose": "所有正式科研计算无论长短，由 Codex 检查并提交给独立服务或既有批调度器，保存任务日志和输入指纹并核验恢复。",
+      "inputs": "已授权计算、任务命令、工作目录、资源预算、输入文件和项目验收/检查点约定",
+      "outputs": "独立服务或作业标识、提交回执、冻结计划、逐次状态与日志、恢复兼容记录",
+      "prompt": "开始这些正式计算，无论长短。请检查资源和已有任务后实际提交到关闭 Codex 后仍继续的独立队列，核验托管状态并保存日志和输入指纹。",
       "requires": []
     },
     {
@@ -267,6 +277,10 @@
     {
       "path": "skills/nature-literature-pipeline/SKILL.md",
       "change": "增加外部技能/调度渠道缺失时的平台适配说明，原始流程和参考资料保留。"
+    },
+    {
+      "path": "skills/scientific-workflow-builder/SKILL.md",
+      "change": "将已授权正式计算交给独立执行技能的可选衔接，科学阶段接口及验收逻辑保留。"
     }
   ],
   "excluded_files": [],
@@ -809,27 +823,43 @@
     "skills/research-weekly-review/SKILL.md": "255a8c1f166b0a5a9bf4550287e25c3423bf9669188001775eae331781320bed",
     "skills/research-weekly-review/references/reports.md": "9aab06a697f64cd17ab74e906ec22254331d3d48c5232bc7db212a4f7aab0932",
     "skills/research-weekly-review/agents/openai.yaml": "44254ebc0cb28e7ec855b1dac17f0004e3653952bc5be0fc59a0437e548cc5f0",
-    "skills/research-weekly-review/scripts/render_report.py": "8979f6b74869b49b715b7abf5b9b1ab4cb45d0803f8e1b2d5cac98902d571903"
+    "skills/research-weekly-review/scripts/render_report.py": "8979f6b74869b49b715b7abf5b9b1ab4cb45d0803f8e1b2d5cac98902d571903",
+    "skills/computation-queue-runner/SKILL.md": "e2deeafef9f44fba184583102d934bb68f8537e5b6a1328f7f27f589eaecfc65",
+    "skills/computation-queue-runner/references/recovery-and-evidence.md": "47b6eb9d2101a9ac67a3e8c02fe28d42800c65cc874a2bb84a6071832554206b",
+    "skills/computation-queue-runner/references/project-policy.md": "ec620296be488113cd3cb1dba050293c12c5569058e89d6ef637c04d0f12edeb",
+    "skills/computation-queue-runner/references/local-queue.md": "923a98c14b03d4ad8cf0c165ff3c79b682491a72c7f176886afcba0b7e3482ac",
+    "skills/computation-queue-runner/references/scheduler-adapters.md": "af8026e544c6307729450c0a48d04672f778a69b99f2c61ca1eda77c042fa7b2",
+    "skills/computation-queue-runner/agents/openai.yaml": "7aea2b6f21f3f11c9722505c1e23d4d84fe177c6e56b765a4f8af818bdd1d426",
+    "skills/computation-queue-runner/tests/test_durable_queue.py": "ce4dea94782a91b448dd87f47cc5de30c7ffa694137f4bc8f65b09f43c225821",
+    "skills/computation-queue-runner/scripts/durable_queue.py": "5351064d9c891ff38b0f03950cbbe19815e7c904e9649783622ff93978c6bac2"
   },
   "files": {
     "LICENSE": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c",
     "LICENSES/CC-BY-NC-4.0.txt": "f342d184c5d8649197e5db900861f8a8d39b9916e469cb950f2978db2b2c1f6a",
-    "README.md": "f9291eaeb8e72395778b968f7fae50bb15286d8d427709ca0926b4508bc4b64f",
-    "THIRD_PARTY_NOTICES.md": "61eab95bc6e9e877a884a4ea10dfd06531682afd94763f7df035d369bb3ea5d2",
-    "UPSTREAM_COMPARISON.json": "99b47589057436dcf8ebea6d53e9a5136e51d5ba49330877d5ecacb551a0ee54",
+    "README.md": "cdf3fbdcc0ac8e804fecb602b7754d50c5f13b5876a8db0a59ea997e0bc83d7f",
+    "THIRD_PARTY_NOTICES.md": "d72489829e27c2067799a98e16e2c72c70818bc48b8deaef13a39fc6dca4b315",
+    "UPSTREAM_COMPARISON.json": "86448cda0c8ded384b899405d5b41d945db442dea4b0ec7cb57de09a0706fde1",
     "config-templates/academic-search.mcp.example.toml": "eee47a477df12a2d5cc0f9d52d6439a0cfc03e3a5eb1e62003485198d4b23287",
     "config-templates/recommender-config.example.json": "5910676c53d91f8968dbc153e9a36f070fdfce183a35233252a767aaca57fe43",
     "config-templates/weekly-review-config.example.json": "25270e035a549d27f355aa59f8a0c766bc0f7738c0820067705f723559403774",
-    "docs/00_整体科研流程.md": "5bb4f6a92648d64e7487b3203855d9043610edeb2d741fd20384f8e95e5a1752",
-    "docs/01_安装与首次使用.md": "baa39c22ec2f761b95f75b9005ec504f4dbe4ac43438c9d57d7a0be3ad3cd579",
-    "docs/02_各技能功能与示例.md": "382b441955cf872b32397c568974b1a11c93a9816e0f1cb919f687ff761ab55a",
-    "docs/03_研究状态与周期协同.md": "56ed145814e15e03f3e8e5b83e6c40d0fb912eae2b5af140b1ec0f7efb5299e7",
-    "docs/04_依赖与常见问题.md": "f51b48e53ef0b98c4bccf14abc641604cfcaa32bbac75168c7a0ca66552d2d45",
-    "docs/05_打包与验证记录.md": "82e7e0d72c5294b01198a5c6cacf21e8745630effe22fe4e81687811e5e3942c",
+    "docs/00_整体科研流程.md": "3c88aaab222225c4694689efb8ea186c22f48f135422362d915697dfa57da487",
+    "docs/01_安装与首次使用.md": "d9ce12bc2dfb5e620fb17d59044487c72d9f28ff2af330fc2b5a7182417f28e7",
+    "docs/02_各技能功能与示例.md": "cc13ed122dbcfd210dd0ce9b80153e78dc191756b4e77a3711b0b841eae9efe1",
+    "docs/03_研究状态与周期协同.md": "472e79c4cec9b9e634b5a48b0648613f068c39552893651d1967f6bb32ab4bf8",
+    "docs/04_依赖与常见问题.md": "f66e1432aa598678b406aa5528dc37ff4ae01b4f29034e6615a0fe0ee895676a",
+    "docs/05_打包与验证记录.md": "5d43ff2da503304d0617bfa2808571d9e88aebcfa7ab8426a435f44d7bec76c2",
     "install_skills.py": "12c42b93c25c9bdc63297361b70775813cf2f9b9a5d4a140af4586d7e6d92db8",
     "skills/academic-writing-fidelity/SKILL.md": "38df7651452ccb43ea5512988239c17b15f4f994a3c3ddf8485b3c7a113281ba",
     "skills/academic-writing-fidelity/agents/openai.yaml": "8fec98b0e20b3b2bee483b7663702493511b5576c4e3294e22c813713acb182b",
     "skills/academic-writing-fidelity/references/figure-style.md": "0d661b770361a5bb46b15d6a4c95d86ee4206995e2a07a1bd38cc83d0f30215d",
+    "skills/computation-queue-runner/SKILL.md": "e2deeafef9f44fba184583102d934bb68f8537e5b6a1328f7f27f589eaecfc65",
+    "skills/computation-queue-runner/agents/openai.yaml": "7aea2b6f21f3f11c9722505c1e23d4d84fe177c6e56b765a4f8af818bdd1d426",
+    "skills/computation-queue-runner/references/local-queue.md": "923a98c14b03d4ad8cf0c165ff3c79b682491a72c7f176886afcba0b7e3482ac",
+    "skills/computation-queue-runner/references/project-policy.md": "ec620296be488113cd3cb1dba050293c12c5569058e89d6ef637c04d0f12edeb",
+    "skills/computation-queue-runner/references/recovery-and-evidence.md": "47b6eb9d2101a9ac67a3e8c02fe28d42800c65cc874a2bb84a6071832554206b",
+    "skills/computation-queue-runner/references/scheduler-adapters.md": "af8026e544c6307729450c0a48d04672f778a69b99f2c61ca1eda77c042fa7b2",
+    "skills/computation-queue-runner/scripts/durable_queue.py": "5351064d9c891ff38b0f03950cbbe19815e7c904e9649783622ff93978c6bac2",
+    "skills/computation-queue-runner/tests/test_durable_queue.py": "ce4dea94782a91b448dd87f47cc5de30c7ffa694137f4bc8f65b09f43c225821",
     "skills/jmps-writing-fidelity/SKILL.md": "efa2a25d69eeab14a32bd0e47e588bb2e74baabd70f943ff76c3bd813c8bb3fc",
     "skills/jmps-writing-fidelity/agents/openai.yaml": "bfada8f41dedabf6afeb0f8483e8453dc48422ae9b0e97bb029d6eb3b6118c9c",
     "skills/jmps-writing-fidelity/references/figure-style.md": "0d661b770361a5bb46b15d6a4c95d86ee4206995e2a07a1bd38cc83d0f30215d",
@@ -1353,7 +1383,7 @@
     "skills/research-weekly-review/agents/openai.yaml": "44254ebc0cb28e7ec855b1dac17f0004e3653952bc5be0fc59a0437e548cc5f0",
     "skills/research-weekly-review/references/reports.md": "9aab06a697f64cd17ab74e906ec22254331d3d48c5232bc7db212a4f7aab0932",
     "skills/research-weekly-review/scripts/render_report.py": "8979f6b74869b49b715b7abf5b9b1ab4cb45d0803f8e1b2d5cac98902d571903",
-    "skills/scientific-workflow-builder/SKILL.md": "831430ad9f00103fe6a487607b52b26e546fd3493f295bcf80db865f8df44bd6",
+    "skills/scientific-workflow-builder/SKILL.md": "5ba0d54c3967298583ad8a0cb5547b96bb981edeea77af9d53665fcf42c2c01c",
     "skills/scientific-workflow-builder/agents/openai.yaml": "4293be37533dd4ac743974f95ed5876ae0d48486b4f1aa28bc70201ee34e5fea",
     "skills/scientific-workflow-builder/assets/figure-provenance.csv": "ead84234244688ed4c803d390d2d24a52daeaca508bdf4a8e058592141b78763",
     "skills/scientific-workflow-builder/assets/run-records.json": "751db56988eb30c18e9016ae463b4f87a17445c51cd0df4821450d428695220b",
@@ -1367,14 +1397,15 @@
     "skills/scientific-workflow-builder/scripts/audit_workflow.py": "6625cba6ed15063d485434809ae9f79c6e6e735db0cd5c18253b5244894ca160",
     "skills/scientific-workflow-builder/tests/test_audit_workflow.py": "d8b97f81c2e7103a729a2eab38269da7cdde6be43747d6fd29ba27fce56c14c3",
     "verify_package.py": "c167268a3e0025a7f6706e5eeea5154195fc78c53a833b157d11516f7189bf95",
-    "完整使用说明.html": "7547ae83a97dcd08d9dde83bd96b5e9775cff1f697cbad071956eb2cd9803ddb"
+    "完整使用说明.html": "7aafc636ac72d896680cae3fa37460bb6e572f32ec2b4ccbcb5dcd99ebf0a656"
   },
-  "skill_count": 22,
-  "snapshot_policy": "技能内容与已验证的22项分享快照逐字节一致；本版按科研流程整合说明和目录排序。",
+  "skill_count": 23,
+  "snapshot_policy": "source_snapshot_sha256 保留原始安装快照作为历史来源；当前发布文件以 files 为准。本版增加通用正式计算独立队列及工作流交接，按科研流程整合23项能力。",
   "documentation_model": "按科研环节、逐项能力和周期协同介绍，不按技能加入时间组织。",
   "publication": {
     "repository": "https://github.com/Zhiyuanlll/scientific-research-skills",
     "notices": "THIRD_PARTY_NOTICES.md",
-    "upstream_review_commit": "19be8d45e0d5233aa44be6d4572e655b9914ff54"
+    "upstream_review_commit": "19be8d45e0d5233aa44be6d4572e655b9914ff54",
+    "updated_on": "2026-10-16"
   }
 }

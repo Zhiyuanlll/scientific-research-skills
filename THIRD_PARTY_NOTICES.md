@@ -1,6 +1,6 @@
 # 来源、署名与分项许可
 
-本仓库由 Zhiyuanlll 整合为 22 项科研技能工具集。Nature 系列基于 [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills)，保留 fork 关系及上游历史。上游许可核查基准为 `19be8d45e0d5233aa44be6d4572e655b9914ff54`；本地技能快照并非该提交的逐字节副本，也不声称所有内容均由本仓库作者原创。
+本仓库由 Zhiyuanlll 整合为 23 项科研技能工具集。Nature 系列基于 [Yuan1z0825/nature-skills](https://github.com/Yuan1z0825/nature-skills)，保留 fork 关系及上游历史。上游许可核查基准为 `19be8d45e0d5233aa44be6d4572e655b9914ff54`；本地技能快照并非该提交的逐字节副本，也不声称所有内容均由本仓库作者原创。
 
 ## 许可范围
 
@@ -20,3 +20,7 @@
 已知分享适配：四个技能将 author/version 移入 metadata；nature-reader 评测中的作者本机路径替换为通用路径；nature-proposal-writer 与 nature-literature-pipeline 增加工具/平台缺失时的适配说明。精确路径见 PACKAGE_MANIFEST.json 的 share_copy_modifications。发布版另补充许可文件、来源说明、GitHub 安装方式和技能入口中的再分发标记。
 
 仓库中的其他差异可能来自较早快照或此前本地适配，不全部归因于本次整合。UPSTREAM_COMPARISON.json 记录相对于上述核查提交的文件散列差异，供追溯，不能替代逐文件著作权判断。
+
+## 独立计算执行能力（2026-10-16）
+
+新增自编 computation-queue-runner，按 Apache-2.0 提供正式科研计算的独立提交、状态核验与恢复工具，适用于长短任务；同步调整工作流交接、中文指南、离线手册及清单。已有第三方许可及署名保留，未纳入个人聊天或项目运行记录。

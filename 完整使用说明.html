@@ -1,25 +1,34 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>科研全流程 Skill 使用手册</title><style>body{margin:0;background:#f6f8fa;color:#172b3a;font:16px/1.8 system-ui,"Noto Sans CJK SC",sans-serif}nav{padding:22px;background:#123c51;display:flex;gap:14px;flex-wrap:wrap}nav a{color:#fff}main{max-width:1100px;margin:auto;padding:24px}section{background:white;margin-bottom:24px;padding:28px;border-radius:12px}h1{font-size:28px}h2{font-size:22px;margin-top:32px}table{display:block;overflow:auto;border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #d8e2e8;padding:9px;min-width:100px;vertical-align:top}th{background:#edf4f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f4f6;padding:18px;border-radius:7px}code{font-family:ui-monospace,monospace;color:#1b506b}blockquote{border-left:4px solid #51a1aa;padding:4px 16px;background:#f5fafb}a{color:#036b91}section:target{outline:2px solid #75b9c7}@media print{nav{display:none}section{padding:0;break-before:page}table{font-size:11px}body{background:white}}</style><nav><a href="#doc-0">README</a><a href="#doc-1">00_整体科研流程</a><a href="#doc-2">01_安装与首次使用</a><a href="#doc-3">02_各技能功能与示例</a><a href="#doc-4">03_研究状态与周期协同</a><a href="#doc-5">04_依赖与常见问题</a><a href="#doc-6">05_打包与验证记录</a></nav><main><section><h1>GitHub 公开发布版</h1><p>仓库：<a href="https://github.com/Zhiyuanlll/scientific-research-skills">Zhiyuanlll/scientific-research-skills</a>。下文为整合手册正文；公开发布新增的来源、署名及分项许可请参阅 <a href="THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>。根目录 Apache-2.0、已有 MIT 模块及 figures4papers 的 CC BY-NC 4.0 各按其范围适用。最新安装命令和验证记录以 README.md 与 docs/05_打包与验证记录.md 为准。</p></section><section id="doc-0"><h1>科研全流程 Skill 分享包</h1>
-<p>这套工具集包含 22 个技能，支持从理解研究背景、文献推荐与精读、知识沉淀、研究问题与证据计划，到工作流搭建、统计绘图、论文写作、投稿返修和科研回顾的完整流程。</p>
-<p>知识库将文献与研究认识沉淀为可复用的理论、方法和方向证据；周回顾与计划贯穿各研究阶段，核对真实进展、维护研究状态并衔接后续工作。每项技能可以独立按需使用，也可通过来源记录和交付物协作。</p>
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>scientific-research-skills · 23 项科研技能使用手册</title><style>body{margin:0;background:#f6f8fa;color:#172b3a;font:16px/1.8 system-ui,"Noto Sans CJK SC",sans-serif}nav{padding:22px;background:#123c51;display:flex;gap:14px;flex-wrap:wrap}nav a{color:#fff}main{max-width:1100px;margin:auto;padding:24px}section{background:white;margin-bottom:24px;padding:28px;border-radius:12px}h1{font-size:28px}h2{font-size:22px;margin-top:32px}table{display:block;overflow:auto;border-collapse:collapse;width:100%;font-size:14px}td,th{border:1px solid #d8e2e8;padding:9px;min-width:100px;vertical-align:top}th{background:#edf4f7}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f0f4f6;padding:18px;border-radius:7px}code{font-family:ui-monospace,monospace;color:#1b506b}blockquote{border-left:4px solid #51a1aa;padding:4px 16px;background:#f5fafb}a{color:#036b91}section:target{outline:2px solid #75b9c7}@media print{nav{display:none}section{padding:0;break-before:page}table{font-size:11px}body{background:white}}</style></head>
+<body><nav><a href="#doc-0">README</a><a href="#doc-1">00_整体科研流程</a><a href="#doc-2">01_安装与首次使用</a><a href="#doc-3">02_各技能功能与示例</a><a href="#doc-4">03_研究状态与周期协同</a><a href="#doc-5">04_依赖与常见问题</a><a href="#doc-6">05_打包与验证记录</a></nav><main><section id="doc-0"><h1>scientific-research-skills · 科研全流程技能工具集</h1>
+<p>这套工具集包含 23 个技能，支持从理解研究背景、文献推荐与精读、知识沉淀、研究问题与证据计划，到工作流搭建、独立队列执行、统计绘图、论文写作、投稿返修和科研回顾的完整流程。</p>
+<p>知识库将文献与研究认识沉淀为可复用的理论、方法和方向证据；工作流技能定义阶段与科学验收，计算队列技能把正式科研计算交给独立服务或计算调度器，避免依赖聊天持续活跃；周回顾与计划贯穿各研究阶段，核对真实进展、维护研究状态并衔接后续工作。每项技能可以独立按需使用，也可通过来源记录和交付物协作。</p>
 <p>建议按以下顺序阅读：</p>
 <ol>
 <li><a href="#doc-1">整体科研流程</a>：主线、周期反馈、交接产物及完整研究示例。</li>
 <li><a href="#doc-2">安装与首次使用</a>：完整或按需安装、更新、验证与调用。</li>
-<li><a href="#doc-3">技能功能与使用示例</a>：按科研流程介绍 22 项能力及操作示例。</li>
+<li><a href="#doc-3">技能功能与使用示例</a>：按科研流程介绍 23 项能力及操作示例。</li>
 <li><a href="#doc-4">研究状态与周期协同</a>：推荐配置、知识维护、周回顾与计划、资料交接和日程安排。</li>
-<li><a href="#doc-5">依赖与常见问题</a>：检索、下载、绘图、知识库审计、周报公式和 HTML 等依赖。</li>
+<li><a href="#doc-5">依赖与常见问题</a>：检索、下载、独立计算服务、绘图、知识库审计、周报公式和 HTML 等依赖。</li>
 <li><a href="#doc-6">打包与验证记录</a>：文件快照、分享版适配和实际检查范围。</li>
 </ol>
-<p>也可用浏览器离线打开 <a href="%E5%AE%8C%E6%95%B4%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.html">完整使用说明.html</a>。</p>
-<p>解压后，在包根目录运行：</p>
-<pre><code class="language-bash">python3 verify_package.py
+<p>也可用浏览器离线打开 <a href="#doc-0">完整使用说明.html</a>。</p>
+<p>从 GitHub 获取后，在仓库根目录运行：</p>
+<pre><code class="language-bash">git clone https://github.com/Zhiyuanlll/scientific-research-skills.git
+cd scientific-research-skills
+python3 verify_package.py
 python3 install_skills.py --dry-run
 python3 install_skills.py
 </code></pre>
 <p>默认目标为 <code>~/.agents/skills/</code>，可用 <code>--target</code> 指定实际技能目录，<code>--only</code> 按需选择并带上包内依赖。不同内容的同名技能不会被覆盖。Windows 可按本机 Python 安装将 <code>python3</code> 换成 <code>py -3</code>。</p>
+<p>正式科研计算无论长短，都应通过独立后端执行，包含单个小算例、参数扫描和批量任务。用户授权“开始计算”后，Codex 准备计划、核查资源并实际执行提交，再报告服务标识、日志、心跳与恢复条件；无需用户另行手动提交。技能可按任务自动选用，也可显式请求：“使用 $computation-queue-runner，开始这些正式计算，关闭 Codex 后队列仍继续。”语法检查、单元测试和短暂环境检查属于开发检查，按其用途执行。</p>
+<p>随附执行器面向 Linux 和 systemd 用户服务；集群上优先对接已有 Slurm 等调度器。安装技能本身不会提交任务，关闭 Codex 后继续也不等于保证主机休眠、重启或断电期间仍在计算。</p>
 <p>安装技能不等于安装外部工具、接入数据库或建立定时任务。所有技能目录应完整保留；研究数据、知识库、周报、推荐记录、访问权限和计算资源由使用者自行配置。包内不含个人聊天、密钥、机构账号、私人科研结果或 HEA 求解器。</p>
+<h2>来源与许可</h2>
+<p>Nature 系列基于 <a href="https://github.com/Yuan1z0825/nature-skills">Yuan1z0825/nature-skills</a>，本仓库保留 fork 关系，并加入研究上下文推荐、知识库、工作流与计算队列、周回顾及写作保真等协同能力。根目录采用 Apache-2.0；已有 MIT 模块与 figures4papers 的 CC BY-NC 4.0 材料按各自许可保留。分享和再使用前请阅读 <a href="THIRD_PARTY_NOTICES.md">来源、署名与分项许可</a>。</p>
 </section><section id="doc-1"><h1>科研全流程：从文献与知识到计算证据和论文</h1>
-<p>这套 22 项技能围绕同一条研究证据链协作：理解研究现状，获得和消化文献，积累知识，提出可检验问题，组织计算或分析，形成图表与论证，并在持续回顾中修正下一步。使用者提供真实材料、代码、数据和访问权限；各技能的输出成为后续工作的有来源输入。</p>
+<p>这套 23 项技能围绕同一条研究证据链协作：理解研究现状，获得和消化文献，积累知识，提出可检验问题，组织并可靠运行计算或分析，形成图表与论证，并在持续回顾中修正下一步。使用者提供真实材料、代码、数据和访问权限；各技能的输出成为后续工作的有来源输入。</p>
 <h2>研究主线</h2>
 <pre><code class="language-text">研究目标、已有背景与当前问题
                ↓
@@ -31,7 +40,9 @@ python3 install_skills.py
                ↓
 问题与证据计划：主张 → 对照/计算 → 验收条件
                ↓
-科研工作流：阶段接口 → 小试验证 → 批量与恢复
+科研工作流：阶段接口 → 小试验证 → 任务矩阵
+               ↓
+独立队列执行：资源检查 → 持久服务/调度器 → 日志与恢复
                ↓
 统计分析与科研绘图：源表、样本、图件及数据来源
                ↓
@@ -84,7 +95,13 @@ python3 install_skills.py
 <td>问题、方法与计算</td>
 <td>scientific-workflow-builder</td>
 <td>假设、证据需求、已有代码和资源</td>
-<td>阶段接口、验证矩阵、小试、任务与恢复记录；程序退出成功不等于科学验收</td>
+<td>阶段接口、验证矩阵、小试与任务矩阵；程序退出成功不等于科学验收</td>
+</tr>
+<tr>
+<td>正式计算与独立队列</td>
+<td>computation-queue-runner</td>
+<td>已授权任务、明确命令、资源与恢复条件</td>
+<td>独立服务或调度作业、执行快照、日志与心跳；提交后核实真实运行，进程完成与科学验收分开</td>
 </tr>
 <tr>
 <td>统计与绘图</td>
@@ -128,7 +145,9 @@ python3 install_skills.py
 <h2>相邻技能如何分工</h2>
 <p>research-context-recommender 决定针对当前研究问题和学习需要该读什么，nature-academic-search 执行检索核实；nature-literature-pipeline 适合按主题评分和归档。可以选择一个固定推荐入口，或明确专题监测与问题推荐的分工及去重范围。</p>
 <p>nature-reader 保留原文、图表及定位，knowledge-library-builder 从选定材料凝练跨论文、跨项目的概念与方向知识。知识笔记不能替代全文对照；周报记录进展与变化，也不能替代稳定知识。</p>
-<p>scientific-workflow-builder 管接口、验证、运行与证据来源，nature-statistics 检查统计设计和报告，nature-figure 管图件表达。绘图失败不自动要求重算，图形美化不改变数据验收状态。</p>
+<p>scientific-workflow-builder 管科研阶段、接口、定量验证和证据来源；computation-queue-runner 将正式科研计算交给独立服务或现有调度器，核对资源、队列状态和恢复证据。前者规定什么才算有效科学结果，后者记录任务如何持续执行。正式计算包含单个短算例、收敛测试、参数扫描与批量生产，不以预计时长决定是否独立提交；开发中的语法检查、单元测试和短暂环境检查按其用途执行。nature-statistics 检查统计设计和报告，nature-figure 管图件表达。绘图失败不自动要求重算，图形美化不改变数据验收状态。</p>
+<p>用户授权“开始计算”后，Codex 自动选用计算队列能力，准备计划、检查并执行提交，交付可核实的服务或作业标识。仅要求设计时只交付设计；开始已授权任务不增加必经的二次确认，也不把实际提交留作用户必须手动完成的一步。</p>
+<p>正式计算不能依赖聊天工具一直保持活跃。独立执行后仍需核实服务或调度器中的真实作业、标准输出/错误、心跳及子进程；心跳只证明执行器仍响应。关闭 Codex、用户退出登录、主机休眠、重启和断电是不同条件。随附 Linux 用户服务针对关闭客户端后的持续执行；退出登录另需检查 linger，休眠和重启后的行为由主机与调度系统决定。恢复前核对输入、代码、配置和检查点兼容性，不承诺统一的“运行三小时就中断”等时限。</p>
 <p>researchwrite 是 nature-proposal-writer 目录对应的调用名，适合复杂论证规划或重构；nature-writing 负责章节和投稿材料，academic-writing-fidelity 保护科学含义，nature-polishing 修改成熟文字。JMPS 专项仅用于明确的目标期刊任务。</p>
 <p>research-weekly-review 的 review 负责更新共享研究状态，plan 读取状态提出安排；推荐技能核对后保存自己的事件，知识库维护记录留在 vault。各自的写入归属和配置见 <a href="#doc-4">研究状态与周期协同</a>。</p>
 <h2>一个贯穿全过程的 HEA 研究示例</h2>
@@ -138,7 +157,8 @@ python3 install_skills.py
 <li><strong>阅读全文。</strong> “使用 $nature-reader 精读方法论文，保留公式、图表与原文定位，提取模型假设、参数来源和验证条件。”</li>
 <li><strong>凝练知识。</strong> “使用 $knowledge-library-builder，从这些已读材料深化随机场与位错响应方向；公共理论共用，方向条件和相反证据分别解释，不只建立目录。”</li>
 <li><strong>建立验证计划。</strong> “使用 $scientific-workflow-builder，围绕模型是否足以解释响应建立证据链，区分原子输入、独立验证和参数预测。先设计，不启动批量。”</li>
-<li><strong>打通计算闭环。</strong> “在已授权的小试范围内完成输入、求解和定量比较，阈值说明依据，保留未通过项，再根据实际结果和资源组织后续计算。”</li>
+<li><strong>打通计算闭环。</strong> “在已授权的小试范围内，通过独立后端完成输入、求解和定量比较，阈值说明依据，保留未通过项，再根据实际结果和资源组织后续计算。”</li>
+<li><strong>运行正式任务队列。</strong> “开始这些正式计算。使用 $computation-queue-runner，核对线程、内存和现有负载后实际提交串行队列，关闭 Codex 后也继续。记录服务或作业标识、输入快照、日志与心跳；完成后再按既定科学验收判断结果。”</li>
 <li><strong>分析并绘图。</strong> “使用 $nature-statistics 核对种子与配对设计，用 $nature-figure 从已验收数据生成图、代码、源表和所需格式，标明样本及来源。”</li>
 <li><strong>组织论文。</strong> “使用 $researchwrite 建立事实、证据表和论证图，再用 $nature-writing 起草 Results 与 Discussion，结论限于实际证据。”</li>
 <li><strong>核验引用与表达。</strong> “广泛相关工作用 $nature-academic-search，需要 CNS 支撑时用 $nature-citation，再用 $nature-ref-verifier 核验。目标为 JMPS 时用专项规范，并检查科学原义。”</li>
@@ -160,10 +180,12 @@ python3 install_skills.py --list
 python3 install_skills.py --dry-run
 python3 install_skills.py
 </code></pre>
-<p>默认安装 22 个目录至 <code>~/.agents/skills/</code>。安装器先核对分享包文件校验值；相同内容的已安装技能跳过，不同内容的同名技能会使本次安装停止，且在复制前报告。它不覆盖旧版、不修改 Codex 配置、不安装软件包、不创建任务。</p>
+<p>默认安装 23 个目录至 <code>~/.agents/skills/</code>。安装器先核对分享包文件校验值；相同内容的已安装技能跳过，不同内容的同名技能会使本次安装停止，且在复制前报告。它不覆盖旧版、不修改 Codex 配置、不安装软件包、不创建任务。</p>
 <p>指定其他位置或按需安装：</p>
 <pre><code class="language-bash">python3 install_skills.py --target /实际项目/.agents/skills
 python3 install_skills.py --only research-context-recommender scientific-workflow-builder
+python3 install_skills.py --only scientific-workflow-builder computation-queue-runner
+python3 install_skills.py --only computation-queue-runner
 python3 install_skills.py --only nature-writing nature-polishing nature-reader
 python3 install_skills.py --only researchwrite
 </code></pre>
@@ -180,6 +202,7 @@ python3 install_skills.py --only researchwrite
   research-context-recommender/SKILL.md
   nature-academic-search/SKILL.md
   scientific-workflow-builder/SKILL.md
+  computation-queue-runner/SKILL.md
   ...
 </code></pre>
 <p>nature-writing、nature-polishing、nature-reader、nature-paper2ppt 与 nature-shared 保持同级。推荐技能与 nature-academic-search 也应一起安装。</p>
@@ -194,11 +217,24 @@ python3 install_skills.py --only researchwrite
 <p>使用 $academic-writing-fidelity，检查我粘贴的段落，保留数量、假设、例外和证据强度。</p>
 </blockquote>
 <p>最后再配置检索、下载和定时推荐。技能能被发现、网络检索可用、机构全文访问可用是三个不同的检查结果。</p>
+<h2>首次使用独立计算队列</h2>
+<p><code>computation-queue-runner</code> 可单独安装，不强制安装工作流技能。它随附的执行器需要 Linux、Python 3.9+、systemd 254+ 和可用的 <code>systemctl --user</code>/<code>systemd-run --user</code>。其他系统可读技能中的调度适配说明；随附脚本不提供原生 Windows、macOS 或 Slurm 提交后端，也不因安装技能而改变主机设置。</p>
+<p>正式科研计算无论长短，包括单个小算例，都交给独立后端执行。用户说明目标与授权范围后，Codex 从项目材料准备任务清单、实际可执行文件、工作目录、输入、线程与内存预算及既定验收命令，并检查后实际提交。开始已授权计算不要求用户手动再提交或进行固定的二次确认；仅要求设计时不运行。语法检查、单元测试和短暂环境检查属于开发检查，不因执行 shell 命令就都成为正式计算。可直接使用：</p>
+<blockquote>
+<p>开始这些正式计算。使用 $computation-queue-runner，检查资源和正在运行的计算后实际提交到独立服务，核实服务标识、日志与心跳，关闭 Codex 后队列仍继续；不要重启或接管其他现有任务。</p>
+</blockquote>
+<p>以下是 Codex 可准备并执行的底层命令，也供需要时手动操作。用户无需逐条复制；实际路径由执行者核对。生成的模板应先编辑，不能直接当生产计划：</p>
+<pre><code class="language-bash">python3 /实际技能目录/computation-queue-runner/scripts/durable_queue.py template /实际项目/queue.json
+python3 /实际技能目录/computation-queue-runner/scripts/durable_queue.py validate /实际项目/queue.json
+python3 /实际技能目录/computation-queue-runner/scripts/durable_queue.py submit /实际项目/queue.json --run-dir /实际项目/queue-run
+python3 /实际技能目录/computation-queue-runner/scripts/durable_queue.py status /实际项目/queue-run
+</code></pre>
+<p>提交后检查状态、服务和任务进程，确认关闭客户端不会结束它；不能只凭“命令已返回”判断独立运行已建立。若还要求退出用户登录后继续，提交时使用 <code>--require-linger</code> 并检查该用户的 linger 实际已启用。脚本不自动启用它。关闭客户端后的持续执行不保证休眠、重启或断电期间计算，恢复要求和检查点格式见该技能自身说明。</p>
 <h2>更新与移除</h2>
 <p>更新前保存接收者自己的同名技能改动，将旧目录移到技能发现根目录之外的备份位置，再安装新版。不要直接用备份目录名留在技能根目录中，否则可能继续被识别。个人研究记录在 runtime_dir，更新技能时保留，勿用示例覆盖。</p>
 <p>移除时仅移走本次安装的技能目录；检查其他技能是否还依赖它。安装器不执行卸载、删除记录或修改系统设置。</p>
 </section><section id="doc-3"><h1>科研技能功能与使用示例</h1>
-<p>这 22 项技能按科研工作的主要环节排列。可根据当前问题选择入口，无需每次依次运行全部技能。知识库贯穿资料积累与方法发展，周回顾与计划按周期读取各环节的实际证据。</p>
+<p>这 23 项技能按科研工作的主要环节排列。可根据当前问题选择入口，无需每次依次运行全部技能。知识库贯穿资料积累与方法发展，周回顾与计划按周期读取各环节的实际证据。</p>
 <table>
 <thead>
 <tr>
@@ -243,6 +279,12 @@ python3 install_skills.py --only researchwrite
 <td>scientific-workflow-builder</td>
 <td><code>$scientific-workflow-builder</code></td>
 <td>科研工作流搭建</td>
+<td>无必需包内依赖</td>
+</tr>
+<tr>
+<td>computation-queue-runner</td>
+<td><code>$computation-queue-runner</code></td>
+<td>独立计算与串行队列</td>
 <td>无必需包内依赖</td>
 </tr>
 <tr>
@@ -401,21 +443,40 @@ python3 &lt;技能目录&gt;/scripts/smoke_test.py
 <blockquote>
 <p>使用 $scientific-workflow-builder。请根据研究问题和代码建立工作流，先打通小算例，明确验证关口，再设计批量与恢复。</p>
 </blockquote>
-<h2>7. 统计方法与报告：nature-statistics</h2>
+<h2>7. 独立计算与串行队列：computation-queue-runner</h2>
+<p>把正式科研计算提交给聊天会话之外的执行后端，适用于单个短算例、收敛测试、参数扫描与批量生产，不以任务时长设门槛。用户授权“开始计算”后，Codex 准备计划、核对实际进程归属、资源和已有作业，再实际提交、观察和按证据恢复；无需用户另行手动提交，也不增加固定的二次确认。仅要求设计时不启动。语法检查、单元测试和短暂环境检查属于开发检查，按其用途执行。</p>
+<p>本技能可由支持技能自动选择的助手根据正式计算请求直接选用，也可显式调用。目标是关闭 Codex 或聊天停止活跃后仍有独立执行后端；不把 <code>&amp;</code>、<code>nohup</code>、终端标签存在或一次心跳当作持久执行已经建立的证明。</p>
+<p>输入：明确任务与顺序、绝对命令和工作目录、代码/输入/配置、线程和内存预算、日志与检查点位置、科学验收条件。</p>
+<p>产出：可检查的任务计划、独立服务或调度作业标识、执行快照、逐任务标准输出/错误、心跳与状态、恢复判定和仍未通过的检验。</p>
+<blockquote>
+<p>开始这些正式计算。使用 $computation-queue-runner，检查线程、内存和现有负载后实际提交串行队列，关闭 Codex 后也继续，不重启其他正在运行的任务。提交后核实服务、子进程、日志和心跳，区分进程结束与科学验证通过；需要恢复时先核对检查点兼容性。</p>
+</blockquote>
+<h3>随附执行器与适用范围</h3>
+<p><code>scientific-workflow-builder</code> 负责定义阶段接口、科学证据和验收关口，本技能负责把这些任务持续执行并留下状态。已有 Slurm/PBS 等调度器时优先使用它们，不在集群计算外另造一个依赖聊天的后台队列。随附 <code>scripts/durable_queue.py</code> 是 Linux systemd 用户服务的可执行实现，要求 Python 3.9+ 和 systemd 254+；Slurm 等仅提供适配方法，不能据此声称随附脚本已经支持或验证了相应后端。</p>
+<p>以下命令用于说明执行接口，可由 Codex 完成。它应编辑模板、核查任务后执行提交并检查状态，不把生成计划文件作为“已经开始计算”的交付。</p>
+<pre><code class="language-bash">python3 /实际技能目录/computation-queue-runner/scripts/durable_queue.py template /实际项目/queue.json
+python3 /实际技能目录/computation-queue-runner/scripts/durable_queue.py validate /实际项目/queue.json
+python3 /实际技能目录/computation-queue-runner/scripts/durable_queue.py submit /实际项目/queue.json --run-dir /实际项目/queue-run
+python3 /实际技能目录/computation-queue-runner/scripts/durable_queue.py status /实际项目/queue-run
+</code></pre>
+<p>模板生成后须编辑并核实实际命令、工作目录和资源。任务以参数数组传入，不默认经过 shell；需要管道、重定向或复杂环境时用有版本记录的脚本封装。每个任务可提供独立 <code>validation_argv</code>；命令退出为零、执行器仍有心跳和结果通过科学检验是不同事实。</p>
+<p>确需停止时，使用该运行目录的 <code>stop</code> 命令；恢复使用 <code>resume --checkpoint-manifest &lt;检查点清单绝对路径&gt;</code>，依照技能格式核对代码、输入、配置和检查点。不得为“保持运行”杀掉其他作业、重复提交仍活跃的任务，或直接复用不兼容的部分输出。</p>
+<p>关闭 Codex 与退出登录不同；需要退出登录后继续时使用 <code>--require-linger</code> 检查用户服务条件，不自动修改系统设置。休眠会暂停本机计算；主机重启、断电与调度器时限需要相应的恢复或调度安排。没有统一的“三小时”或其他 Codex 非活跃超时可作为所有中断的原因，需根据服务/调度日志、信号、退出码与主机事件诊断。</p>
+<h2>8. 统计方法与报告：nature-statistics</h2>
 <p>审查独立样本、统计方法、效应量、不确定性、p 值及图注统计报告。</p>
 <p>输入：实验设计、原始/汇总数据、统计方法及结果。</p>
 <p>产出：统计审查与可据实使用的报告文字。</p>
 <blockquote>
 <p>使用 $nature-statistics。请检查我的重复单位、误差条和统计方法，并区分已完成分析与待补充检查。</p>
 </blockquote>
-<h2>8. 科研绘图：nature-figure</h2>
+<h2>9. 科研绘图：nature-figure</h2>
 <p>用 Python 或 R 生成、检查和导出论文图；明确请求时支持 AI 示意图草案。</p>
 <p>输入：数据表、物理量定义、图件结论和导出要求。</p>
 <p>产出：绘图源代码、图文件、图件检查结果。</p>
 <blockquote>
 <p>使用 $nature-figure。请用 Python 根据已验收数据绘制多面板论文图，保留单位、样本数和来源，导出 PDF 与 TIFF。</p>
 </blockquote>
-<h2>9. 提案优先的科研写作：researchwrite</h2>
+<h2>10. 提案优先的科研写作：researchwrite</h2>
 <p>先建立事实、证据表、论证图和章节约定，再写提案、综述或重构复杂稿件。</p>
 <p>输入：研究材料、已有草稿、范围及证据。</p>
 <p>产出：论证与证据文件、分节草稿和质量记录。</p>
@@ -423,21 +484,21 @@ python3 &lt;技能目录&gt;/scripts/smoke_test.py
 <p>使用 $researchwrite。请先建立证据表和论证结构，再起草这个综述；缺少证据的主张单独列出。</p>
 </blockquote>
 <p>调用名是 researchwrite，不是目录名。外部 professor 等技能未包含，分享版已写明可用工具与明确单代理审查的适配方式。</p>
-<h2>10. 论文起草与投稿材料：nature-writing</h2>
+<h2>11. 论文起草与投稿材料：nature-writing</h2>
 <p>起草和重建论文各章节，以及首次投稿的配套材料。</p>
 <p>输入：有来源的结果、图件、研究主张与目标期刊。</p>
 <p>产出：论文段落/章节与投稿材料。</p>
 <blockquote>
 <p>使用 $nature-writing。请根据已完成结果和图件来源表起草 Results，保留模型假设和未验证范围。</p>
 </blockquote>
-<h2>11. 通用科学写作规范：academic-writing-fidelity</h2>
+<h2>12. 通用科学写作规范：academic-writing-fidelity</h2>
 <p>跨期刊保护科学含义、数量、假设和证据强度，保持术语和图注一致。</p>
 <p>输入：原文、事实依据及写作目标。</p>
 <p>产出：忠于科学含义的正文、图注或语言审查。</p>
 <blockquote>
 <p>使用 $academic-writing-fidelity。请审核正文和图注，保留原义、数量、模型条件和证据强度，并清理讨论痕迹。</p>
 </blockquote>
-<h2>12. 文本配文献与引用导出：nature-citation</h2>
+<h2>13. 文本配文献与引用导出：nature-citation</h2>
 <p>分段寻找论述支撑并导出引用；当前默认范围为 Nature/Science/Cell 及所接受子刊。</p>
 <p>输入：待引用文字、时间范围与目标格式。</p>
 <p>产出：论述—来源对应、支持程度及引用文件。</p>
@@ -445,28 +506,28 @@ python3 &lt;技能目录&gt;/scripts/smoke_test.py
 <p>使用 $nature-citation。请为这些论述找 CNS 及子刊的支撑文献，区分直接支持与背景相关，导出 RIS。</p>
 </blockquote>
 <p>当前规则为 CNS/Nature 等指定刊族，不能当作全学科无限刊检索。完整相关工作优先使用 nature-academic-search，不为匹配高影响期刊牺牲直接相关性。</p>
-<h2>13. 参考文献核验：nature-ref-verifier</h2>
+<h2>14. 参考文献核验：nature-ref-verifier</h2>
 <p>核对作者、题名、年份、卷期、页码和 DOI，按需要连接个人 Zotero。</p>
 <p>输入：参考文献列表、BibTeX 或数据库记录。</p>
 <p>产出：字段差异、核实结果和待确认项。</p>
 <blockquote>
 <p>使用 $nature-ref-verifier。请逐条核验这份参考文献，保留未核实项，不凭题名猜测 DOI。</p>
 </blockquote>
-<h2>14. 论文润色与翻译：nature-polishing</h2>
+<h2>15. 论文润色与翻译：nature-polishing</h2>
 <p>以 Nature 倾向的行文组织润色和翻译，按需处理 LaTeX 布局。</p>
 <p>输入：已有文字、目标期刊及受保护含义。</p>
 <p>产出：润色稿、翻译或布局修订。</p>
 <blockquote>
 <p>使用 $nature-polishing。请润色这段 Discussion，保持因果与推断强度，统一正文和图注术语。</p>
 </blockquote>
-<h2>15. JMPS 写作规范：jmps-writing-fidelity</h2>
+<h2>16. JMPS 写作规范：jmps-writing-fidelity</h2>
 <p>面向 JMPS/力学论文的专项表达，保留力学定义和证据边界。</p>
 <p>输入：JMPS 目标稿或明确指定的力学写作任务。</p>
 <p>产出：符合专项规范的稿件和语言审查。</p>
 <blockquote>
 <p>使用 $jmps-writing-fidelity。请按 JMPS 风格修改这段力学论述，保留边界条件、近似假设和数量。</p>
 </blockquote>
-<h2>16. 投稿前模拟审稿：nature-reviewer</h2>
+<h2>17. 投稿前模拟审稿：nature-reviewer</h2>
 <p>从审稿人视角给出三份评估及综合问题清单，依据实际稿件而非假想成果。</p>
 <p>输入：完整或部分稿件、图件与补充材料。</p>
 <p>产出：审稿报告、证据缺口与修改优先级。</p>
@@ -474,35 +535,35 @@ python3 &lt;技能目录&gt;/scripts/smoke_test.py
 <p>使用 $nature-reviewer。请做投稿前模拟审稿，检查创新性、技术论证和证据范围，并定位问题。</p>
 </blockquote>
 <p>三份模拟评估不等于三位真实独立外部审稿人，也不保证录用；以实际阅读范围和来源为限。</p>
-<h2>17. 数据与代码可用性：nature-data</h2>
+<h2>18. 数据与代码可用性：nature-data</h2>
 <p>准备数据可用性声明、仓库计划、数据引用和 FAIR 元数据检查。</p>
 <p>输入：真实数据/代码位置、共享条件和限制。</p>
 <p>产出：可据实使用的声明与共享计划。</p>
 <blockquote>
 <p>使用 $nature-data。请根据这些实际共享条件写数据可用性声明，尚无 DOI 的数据不要编造编号。</p>
 </blockquote>
-<h2>18. 审稿回复与返修：nature-response</h2>
+<h2>19. 审稿回复与返修：nature-response</h2>
 <p>将审稿意见对应到实际行动和证据，形成逐点回复、返修信及修订材料。</p>
 <p>输入：编辑/审稿意见、实际修改与新增结果。</p>
 <p>产出：意见跟踪、逐点回复和修订材料。</p>
 <blockquote>
 <p>使用 $nature-response。请逐点整理审稿意见，区分已修改和待完成事项，据实际证据起草回复。</p>
 </blockquote>
-<h2>19. 论文汇报 PPT：nature-paper2ppt</h2>
+<h2>20. 论文汇报 PPT：nature-paper2ppt</h2>
 <p>从论文形成中文汇报故事、图件、讲稿和真实 PPTX，并检查版式。</p>
 <p>输入：论文、图表、汇报时长与听众。</p>
 <p>产出：PPTX、演讲备注和图件检查。</p>
 <blockquote>
 <p>使用 $nature-paper2ppt。请把这篇论文做成中文组会 PPT，保留完整关键图并说明证据与限制。</p>
 </blockquote>
-<h2>20. 持续文献发现与归档：nature-literature-pipeline</h2>
+<h2>21. 持续文献发现与归档：nature-literature-pipeline</h2>
 <p>按关键词或专题进行候选筛选、评分、精读、摘要交付和归档；调度与渠道另配置。</p>
 <p>输入：研究专题、关键词、评分与归档偏好。</p>
 <p>产出：文献摘要、评分依据、阅读笔记和归档。</p>
 <blockquote>
 <p>使用 $nature-literature-pipeline。请按这个专题筛选候选文献并归档笔记；本次只在当前聊天交付，不创建定时任务。</p>
 </blockquote>
-<h2>21. 科研周回顾与计划：research-weekly-review</h2>
+<h2>22. 科研周回顾与计划：research-weekly-review</h2>
 <p>一个技能包含 review 和 plan 两种模式。review 依据实际证据回顾本周，plan 根据最近可核实状态安排本周或下周；写计划不等于运行计算。它不会自行创建日程、重新检索一批文献或给其他聊天发送消息。</p>
 <p>每次围绕四条线整理：文献与知识补足、关键计算、科学结论、方法推进。计算记录目的、版本、输入条件、关键数值/单位、验收与状态；保留未通过项、相反证据、删失与尚未验证范围。排队、运行中、部分完成、失败、数值完成但未验证分别表达。</p>
 <h3>请求示例</h3>
@@ -525,7 +586,7 @@ python3 &lt;技能目录&gt;/scripts/smoke_test.py
 </code></pre>
 <p>本包不安装或附带 TeX、字体、marked 或 Node。无公式的文字版可单独交付；渲染缺工具或缺字体时保留源文件，明确哪些输出未完成。自定义宏先依据原稿展开或给出已有定义，不能为编译成功删改数学含义。生成文件还需要实际检查，不能把文件存在当视觉验收。</p>
 <p>已有关键图优先复用已核实、可追溯图件。确需重绘且数据完整时使用本包 nature-figure，按项目样式与对应样图绘制；没有新关键结果时可以不加新图，不凑图、不造数。报告图片嵌入 <code>.md</code>，保留独立可读图注和源数据/脚本。含绝对路径的 Markdown 图片依赖本地文件位置，换电脑分享单份周报时应连同 assets 一起迁移并检查链接，或使用成功生成的自包含 HTML；不能认为搬动一个 <code>.md</code> 就足够。</p>
-<h2>22. 共享规则与资料：nature-shared</h2>
+<h2>23. 共享规则与资料：nature-shared</h2>
 <p>为写作、润色、阅读和汇报技能提供术语、证据、行文与期刊规则。</p>
 <p>输入：由依赖它的技能按需读取。</p>
 <p>产出：共享规范，通常不单独生成交付物。</p>
@@ -578,6 +639,8 @@ knowledge-library-builder：持续凝练可复用知识、理论与证据
                     ↓
 scientific-workflow-builder：设计、验证和追溯实际计算
                     ↓
+computation-queue-runner：独立服务/调度队列、执行状态与恢复
+                    ↓
 统计/绘图/论文：表达已有证据、形成稿件
                     ↓
 research-weekly-review：核对进展、方法变化、卡点与下步计划
@@ -585,6 +648,10 @@ research-weekly-review：核对进展、方法变化、卡点与下步计划
 </code></pre>
 <p>知识库跨越周期，记录稳定概念、方法、证据与问题；周报记录一段时间的进展、变化和待办。不要把每周进度机械复制进公共概念，也不要把一段知识笔记当作新的完成证据。</p>
 <p>各自保存自己的状态：知识库维护信息留在 vault；推荐事件留在推荐 runtime_dir；周回顾的共享 current_state.json 由 review 单写。指定来源后按需读取，不扫描整台机器，也不互相覆盖状态。</p>
+<h2>计算执行与周期回顾如何交接</h2>
+<p>正式计算不论长短，运行目录都保存执行快照、服务或作业标识、任务状态、日志、心跳与适用的检查点证据。用户要求开始计算后，由 Codex 准备并实际提交，<code>computation-queue-runner</code> 以这些记录和真实后端状态为依据，不能从计划文件、聊天仍开着或助手口头回复推断任务活跃。科研工作流的验收记录则保存收敛、独立检验和产物条件；执行器不会替研究者决定科学阈值。</p>
+<p>周回顾只读这些已授权记录，分别报告已提交、排队、运行、失败、进程完成及科学验证状态。报告生成时作业仍在运行，就记录该时点与可核实进展，不用预计结果补全本周成果。后续计划可提出继续监测、补检验或恢复，不能自行重复提交已有队列。用户要求接续执行时，先检查旧服务/作业和检查点，避免两个执行器同时写同一目录。</p>
+<p>独立计算服务和周期性 Codex 任务各有用途：前者维持已提交计算，后者在设定时点读取证据并产生推荐或报告。创建一个提醒或让助手稍后检查，不能替代独立执行后端；安装任何技能都不会自动建立这两类任务。</p>
 <h2>安排周期任务</h2>
 <p>先手动完成一次，再由接收者明确请求宿主创建日程，例如“周日做 review，周一做 plan，文献推荐读取最近已核实状态”。说明真实时区、资料范围、接收位置和通知偏好。知识库维护若要定时，也需单独提出；安装技能本身不创建任何任务。</p>
 <p>详细的知识库模式、审计命令、周回顾输出和公式渲染示例见 <a href="#doc-3">技能功能与使用示例</a>。</p>
@@ -623,6 +690,11 @@ research-weekly-review：核对进展、方法变化、卡点与下步计划
 <td>工作流记录审计</td>
 <td>Python 3.9+ 标准库</td>
 <td>只读审计脚本，适合其 JSON 格式；不替代科学检验</td>
+</tr>
+<tr>
+<td>独立计算与串行队列</td>
+<td>Linux、Python 3.9+、systemd 254+ 与可用用户服务；退出登录后继续另需用户 linger</td>
+<td>durable_queue.py、任务计划与状态/恢复记录；不自动启用 linger、不接管现有作业，Slurm 等为适配说明</td>
 </tr>
 <tr>
 <td>多源学术 MCP</td>
@@ -681,6 +753,10 @@ research-weekly-review：核对进展、方法变化、卡点与下步计划
 <p>全文获取先用 OA；出版社 API 需要个人配置及实际全文权限。<code>nature-downloader/data/schools.yaml</code> 为空机构模板；用接收者自己的图书馆资源入口配置。相关 Python 依赖在其 requirements.txt。机构浏览器路线引用的 web-access/CDP 运行时没有包含在本包，缺失时需另接可用浏览器能力，不能声称机构下载已就绪。</p>
 <p>Python 绘图常用 numpy、matplotlib，按实际脚本补充 pandas、scipy、seaborn 等；R 使用自身绘图包。只安装自己选择路线需要的依赖。示例资产可用作模板，不得把其数据当作自己的结果。AI 示意图路线需要个人 OpenRouter 配置及明确的生成请求，生成稿不是实验/模拟证据。</p>
 <p>阅读/PPT 输出依赖可用的提取、渲染和生成工具。包内不含原论文 PDF、Office 或内置演示/文档插件。缺少 PDF 渲染、PPTX 生成或字体时说明实际限制；不能以一份文字大纲宣称真实 PPTX 已交付。</p>
+<h2>独立计算后端与资源</h2>
+<p>正式科研计算无论长短，均使用独立执行后端；语法检查、单元测试和短暂环境检查按开发用途执行。用户要求开始后，Codex 准备、核查并实际提交，不要求用户再手动完成提交。随附执行器只向 Linux systemd 用户服务提交；提交成功后还要查服务、任务进程、日志和心跳。systemd 版本要求与字面参数处理有关，不能在旧版上去掉检查后宣称等价支持。没有可用用户服务时明确未提交，并选择环境已有的 Slurm/PBS 等独立调度器；不能悄悄退回受聊天工具生命周期约束的前台进程。Slurm 参考路线需要用户自己的集群账号、队列、资源限额和检查点策略，本包没有跨集群兼容认证。</p>
+<p>提交前检查任务顺序、现有进程、实际可用线程/内存、输出目录和输入版本。串行队列限制的是任务同时运行数量，每个任务内部的 BLAS/OpenMP/求解器线程也需单独约束。资源参数与科学参数分开保存；心跳持续更新不证明求解正在推进，更不证明收敛。无输出的长阶段可结合子进程资源、算法进度与应用检查点判断，不用单一超时武断终止。</p>
+<p>关闭 Codex 后继续依赖独立后端存活；退出登录需核对 linger；本机休眠暂停执行，断电或重启会中断当前进程。随附用户服务不承诺重启后自动续算，恢复前须核对后端是否仍活跃及检查点兼容性。主机休眠策略、开机重启服务和集群 walltime 是环境设置，安装技能不会自动改变。</p>
 <h2>常见问题</h2>
 <ul>
 <li><strong>技能找不到：</strong> 检查根目录是否正确、是否多套一层 skills、是否存在同名重复；查看 SKILL.md 是否完整，再重启客户端。不要把浏览器上传 ZIP 当作本地安装。</li>
@@ -690,24 +766,30 @@ research-weekly-review：核对进展、方法变化、卡点与下步计划
 <li><strong>文献覆盖过窄：</strong> nature-citation 默认 CNS 限刊；广泛专题或相关工作用 nature-academic-search。</li>
 <li><strong>Windows 推荐脚本报 fcntl：</strong> 当前记录助手为 Linux/POSIX，改在配置好的 WSL 环境运行。其他跨平台脚本不代表它也跨平台。</li>
 <li><strong>定时推荐没有执行：</strong> 检查任务是否真正创建、宿主运行条件、资料权限和检索服务；本包不带任务，也不会导入打包者聊天。</li>
+<li><strong>关闭 Codex 后队列中断：</strong> 用 computation-queue-runner 查实际后端、服务/调度器退出信息、信号和日志，区分会话清理、资源耗尽、应用异常、主机休眠/重启及调度时限；不能直接归因为统一的非活跃超时。</li>
+<li><strong>没有 systemd 用户服务或版本不足：</strong> 随附执行器不提交；使用当前环境已有的独立调度器并核验，不能把本地脚本替换为 <code>nohup</code> 就当作同样可靠。</li>
+<li><strong>进程结束但科学验收没通过：</strong> 保留失败或未验证状态，先检查收敛、输出完整性和独立检验，再决定是否恢复或重算；不为得到完成标记而放宽阈值。</li>
 <li><strong>安装器报告同名冲突：</strong> 它不会覆盖；将旧版备份到发现目录之外，比较改动再安装。研究记录放 runtime_dir 不动。</li>
 <li><strong>包校验失败：</strong> 文件可能不完整或已编辑；保留自己的改动，重新解压原 ZIP 校验，不用改写清单掩盖差异。</li>
 </ul>
 <p>保留各目录已有来源、作者和许可证声明；不同资源的权利边界以原声明为准，本包没有给所有原材料重新指定统一许可证。</p>
 <p>知识库与周回顾的模式、工具缺失处理及周报迁移说明见 <a href="#doc-3">技能功能</a>，状态写入规则见 <a href="#doc-4">周期协同</a>。知识库结构审计可跨平台使用 Python 3.10+；这不改变推荐记录助手的原生 Windows fcntl 限制。</p>
 </section><section id="doc-6"><h1>打包与验证记录</h1>
-<p>本包包含 22 个完整技能目录。精确来源散列、分享版适配、生成时间和文件清单见 PACKAGE_MANIFEST.json。此技术记录用于追溯文件和检查，不规定技能的使用顺序。</p>
+<p>本包包含 23 个完整技能目录。精确来源散列、分享版适配、生成时间和文件清单见 PACKAGE_MANIFEST.json。此技术记录用于追溯文件和检查，不规定技能的使用顺序。</p>
 <h2>文件与适配</h2>
-<p>技能内容与已验证的 22 项分享快照逐字节一致；本次只按科研流程重组介绍、配置协同说明和目录排序，没有修改技能实现。原有本地技能、研究记录和此前分享包保留。</p>
+<p>工具集以 22 项分享快照为基础，整合 computation-queue-runner 的独立计算执行能力，并在工作流、安装、依赖与周期协同说明中衔接完整流程。原有研究与写作技能的科学处理逻辑保持，scientific-workflow-builder 增加可选的独立执行交接说明。公开发布版保留来源与许可文件、入口再分发标记、GitHub 获取方式及散列记录；不改动使用者已安装技能或真实运行任务。</p>
 <p>分享快照保留原有六个文件的兼容处理：四项 author/version 元数据移入 metadata，阅读评测的作者本机路径改为通用示例，提案与文献 pipeline 加入真实可用工具和平台适配说明。具体路径和调整理由见 share_copy_modifications。</p>
 <p>本包不含个人 vault、周报、current_state.json、真实聊天 ID、任务配置、账号密钥、字体、生产图件或 HEA 求解器。模板只提供配置起点，不代表资料、外部服务或任务已接入。</p>
 <h2>验证范围</h2>
 <ul>
-<li>该技能快照已有 22/22 格式校验、知识库工具 4 项测试、工作流审计 24 项测试及完整安装/冲突保护检查。本次核对了所有技能字节未变，并重新检查清单、安装计划与文档。</li>
+<li>基础的 22 项快照已有 22/22 格式校验、知识库工具 4 项测试、工作流审计 24 项测试及完整安装/冲突保护检查。这些是基础版本的检查记录；当前工具集包含 23 项，以本次清单和检查结果为准。</li>
 <li>周报渲染快照曾用本机工具实际生成 2 个可视公式及其 PDF/PNG、Markdown 和自包含 HTML，嵌入 1 张本地测试图，核对源文保留和拒绝同路径覆盖；测试图未放入分享技能。</li>
-<li>本次重新校验本地 Markdown 链接、离线 HTML 导航、22 项目录、技能顺序与分项介绍、逐文件散列和 ZIP 内容。</li>
+<li>当前说明按 23 项目录重组技能表、分项介绍、流程交接和离线 HTML。计算队列执行器 18 项行为测试通过；独立前向评估的 16 项合成行为检查通过，另复核了旧服务清理期间拒绝恢复等已发现问题。覆盖极短正式任务、串行顺序、验收待定/通过、失败停止、去重锁、字面参数、输入冻结、取消与检查点恢复。</li>
+<li>2026-10-16 在 Linux / systemd 255 的真实用户服务上完成两组隔离小试：提交端退出后，两个合成任务仍由同一服务依次执行并通过各自校验，核对 MainPID/cgroup 与逐次记录；另一组验证 stop 终止子进程且不启动下一任务。未关闭 Codex 本身，验证的是计算进程已移交独立服务、提交端退出后仍能串行衔接。注销、休眠、重启和 Slurm 后端没有实测。</li>
+<li>全部 23 项技能格式、完整安装/按需安装计划、文件散列及 GitHub 远端内容随发布核对。没有启动或修改真实 FR/PN 等科研任务。</li>
 <li>保留既有绘图示例三处 <code>\lambda</code> 字符串 SyntaxWarning 的记录：不是语法错误，未为说明重组改动其绘图逻辑。</li>
 </ul>
-<p>编译与文件检查不证明科学推导成立、全部任务完成或接口长期可用。没有执行接收者的真实知识库维护、周报、科研求解、数据库检索、机构登录或任务创建。</p>
+<p>编译与文件检查不证明科学推导成立、全部任务完成或接口长期可用。执行器的隔离小试与接收者的生产计算分别记录；没有执行接收者的真实知识库维护、周报、科研求解、数据库检索、机构登录或生产任务创建。Slurm 等适配说明不等于相应后端已经通过实际运行测试。</p>
 <p>实际使用前，按自己的环境核对 Python、检索与下载工具、图形库、TeX、字体和 HTML 渲染依赖。安装后先做小范围手动任务，再按需求建立周期安排；原始记录、知识批注和运行产物分别保存，不用示例覆盖。</p>
-</section></main></html>
+<p>公开发布的来源与分项许可见根目录 THIRD_PARTY_NOTICES.md；Apache-2.0 不覆盖已有 MIT 声明或 CC BY-NC 材料的许可范围。</p>
+</section></main></body></html>
